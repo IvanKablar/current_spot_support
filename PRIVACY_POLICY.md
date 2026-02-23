@@ -78,5 +78,5 @@ We may update this privacy policy from time to time. Changes will be reflected i
 ## 9. Contact
 
 For questions or concerns about data privacy, please contact:
-- GitHub: https://github.com/IvanKablar/current_spot/issues
+- GitHub: https://github.com/IvanKablar/current_spot_support/issues
 - Developer: Ivan Kablar
