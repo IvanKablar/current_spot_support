@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Current Spot - Unofficial Tibber companion for Wear OS. Track electricity prices on your smartwatch in real-time.">
-    <meta name="keywords" content="Tibber, Wear OS, electricity prices, smartwatch, spot price, WearOS app">
+    <meta name="keywords" content="Tibber, Wear OS, electricity prices, smartwatch, spot price, WearOS app, live energy">
     <meta property="og:title" content="Current Spot - Tibber for Wear OS">
-    <meta property="og:description" content="Track electricity prices on your smartwatch. Unofficial Tibber companion app.">
+    <meta property="og:description" content="Track electricity prices and live energy consumption on your smartwatch. Unofficial Tibber companion app.">
     <meta property="og:type" content="website">
     <title>Current Spot - Tibber for Wear OS</title>
     <link rel="stylesheet" href="style.css">
@@ -26,7 +26,7 @@
                 <span class="gradient-text">on your wrist</span>
             </h1>
             <p class="hero-subtitle">
-                Current Spot brings Tibber spot prices to your Wear OS smartwatch.<br>
+                Current Spot brings Tibber spot prices and live energy data to your Wear OS smartwatch.<br>
                 Stay informed about electricity costs without pulling out your phone.
             </p>
             <div class="hero-cta">
@@ -59,7 +59,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>Real-time Prices</h3>
-                    <p>See current electricity prices updated every hour, directly on your watch face.</p>
+                    <p>See current electricity prices updated every 15 minutes or hourly, directly on your watch face.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
@@ -67,24 +67,24 @@
                     <p>Interactive graph showing price trends for today and tomorrow with hourly and 15-minute intervals.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Live Energy Measurement</h3>
+                    <p>Monitor your real-time power consumption directly on your wrist. Requires a Tibber Pulse device.</p>
+                </div>
+                <div class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3>Cheapest Hours</h3>
                     <p>Automatically calculates the cheapest time to use electricity in the next 24-48 hours.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Color-Coded Levels</h3>
-                    <p>Instant visual feedback with color-coded price levels: green for cheap, red for expensive.</p>
-                </div>
-                <div class="feature-card">
                     <div class="feature-icon">⌚</div>
-                    <h3>Watch Face Integration</h3>
-                    <p>Add complications to your favorite watch faces for always-visible price information.</p>
+                    <h3>Complications &amp; Tiles</h3>
+                    <p>Add complications to any watch face or use the tile for quick access to prices without opening the app.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Multi-Language</h3>
-                    <p>Available in English, German, Swedish, Norwegian, and Dutch with localized pricing.</p>
+                    <div class="feature-icon">📡</div>
+                    <h3>Bluetooth Relay &amp; WiFi</h3>
+                    <p>Connect via Bluetooth through your phone for low-power live data, or use WiFi/LTE for standalone operation.</p>
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
                     <img src="assets/pricelist.png" alt="Price List - Hourly Prices" style="width: 100%; height: 100%; object-fit: cover; border-radius: 1rem;">
                 </div>
                 <div class="screenshot-item">
-                    <img src="assets/settings.png" alt="Settings - Connection Mode" style="width: 100%; height: 100%; object-fit: cover; border-radius: 1rem;">
+                    <img src="assets/complication.png" alt="Watch Face Complication" style="width: 100%; height: 100%; object-fit: cover; border-radius: 1rem;">
                 </div>
             </div>
         </div>
@@ -126,19 +126,19 @@
                 </div>
                 <div class="faq-item">
                     <h3>Which devices are supported?</h3>
-                    <p>Current Spot works on all Wear OS devices running Wear OS 3.0 or later (Android API 29+).</p>
+                    <p>Current Spot works on all Wear OS devices running Wear OS 3.0 or later, including Samsung Galaxy Watch 4, 5, 6, and 7 series, Google Pixel Watch, and other Wear OS smartwatches.</p>
                 </div>
                 <div class="faq-item">
                     <h3>How do I connect my Tibber account?</h3>
-                    <p>You'll need to generate a personal access token from your Tibber account and enter it in the companion app on your phone, which then syncs with your watch.</p>
+                    <p>Install the companion app "Current Spot Setup" on your phone, generate a personal access token at developer.tibber.com, and pair your watch via Bluetooth or WiFi.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Does it work without a phone?</h3>
-                    <p>The watch app can run standalone once configured, but you'll need the companion app on your phone for initial setup and token management.</p>
+                    <p>Yes! Once configured, the watch can fetch prices directly via WiFi or LTE. For live energy data, the Bluetooth relay through the companion phone app provides a low-power alternative.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Is it free?</h3>
-                    <p>Yes, Current Spot is completely free to use. No in-app purchases or subscriptions.</p>
+                    <p>Current Spot is free to download and use. Core features like price display, graphs, and price lists are included at no cost.</p>
                 </div>
             </div>
         </div>
@@ -170,24 +170,22 @@
                     <h4>Links</h4>
                     <ul>
                         <li><a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" target="_blank" rel="noopener">Google Play</a></li>
-                        <li><a href="https://github.com/IvanKablar/current_spot" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://github.com/IvanKablar/current_spot_support" target="_blank" rel="noopener">GitHub</a></li>
                         <li><a href="https://tibber.com" target="_blank" rel="noopener">Tibber</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="PRIVACY_POLICY.md">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="https://raw.githubusercontent.com/IvanKablar/current_spot_support/master/PRIVACY_POLICY.md" target="_blank" rel="noopener">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-disclaimer">
-                <p>This app is not affiliated with, endorsed by, or in any way officially connected with Tibber AS. All product names, logos, and brands are property of their respective owners. Tibber® is a registered trademark of Tibber AS.</p>
+                <p>This app is not affiliated with, endorsed by, or in any way officially connected with Tibber AS. All product names, logos, and brands are property of their respective owners. Tibber is a registered trademark of Tibber AS.</p>
                 <p>&copy; 2026 Current Spot. Made with ⚡ for the Tibber community.</p>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
