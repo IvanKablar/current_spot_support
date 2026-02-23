@@ -1,7 +1,7 @@
 # Privacy Policy
 
 **Current Spot - WearOS App**
-Last updated: January 18, 2026
+Last updated: February 22, 2026
 
 ## 1. Data Collection and Storage
 
@@ -45,7 +45,7 @@ The collected data is used solely for:
 
 ## 4. Data Security
 
-- All data is stored locally using Android's encrypted SharedPreferences
+- All data is stored in app-private storage protected by Android's application sandbox
 - Communication with Tibber API uses HTTPS encryption
 - Your access token is never logged or exposed in debug output
 
