@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8B5CF6">
+
+    <title>Current Spot – Tibber für Wear OS | Strompreise &amp; Live-Verbrauch auf der Smartwatch</title>
+    <meta name="description" content="Current Spot ist die inoffizielle Tibber-Begleit-App für Wear OS. Strompreise, Live-Verbrauch vom Tibber Pulse und günstigste Stunden direkt auf deiner Smartwatch.">
+    <meta name="keywords" content="Tibber, Wear OS, Tibber Pulse, Strompreise, Smartwatch, Spotpreis, dynamischer Stromtarif, Live-Verbrauch, Galaxy Watch, Pixel Watch, Strompreis Apple Watch">
+    <meta name="author" content="Ivan Kablar">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://currentspot.app/index.de.html">
+    <link rel="alternate" hreflang="en" href="https://currentspot.app/">
+    <link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html">
+    <link rel="alternate" hreflang="x-default" href="https://currentspot.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Current Spot">
+    <meta property="og:title" content="Current Spot – Tibber für Wear OS">
+    <meta property="og:description" content="Strompreise und Live-Verbrauch auf deiner Wear OS Smartwatch. Inoffizielle Tibber-Begleit-App.">
+    <meta property="og:url" content="https://currentspot.app/index.de.html">
+    <meta property="og:image" content="https://currentspot.app/assets/hero.png">
+    <meta property="og:image:width" content="396">
+    <meta property="og:image:height" content="396">
+    <meta property="og:image:alt" content="Current Spot auf einer Smartwatch mit aktuellem Strompreis">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Current Spot – Tibber für Wear OS">
+    <meta name="twitter:description" content="Strompreise und Live-Verbrauch auf deiner Wear OS Smartwatch. Inoffizielle Tibber-Begleit-App.">
+    <meta name="twitter:image" content="https://currentspot.app/assets/hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%238B5CF6'/%3E%3Cpath d='M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z' fill='white'/%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Current Spot",
+      "alternateName": "Current Spot – Tibber für Wear OS",
+      "operatingSystem": "Wear OS 3.0+, Android 8.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Energy",
+      "description": "Inoffizielle Tibber-Begleit-App für Wear OS. Zeigt Echtzeit-Spotpreise, 48-Stunden-Preisgraph, günstigste Stunden und Live-Verbrauch vom Tibber Pulse direkt auf deiner Smartwatch.",
+      "inLanguage": ["de", "en", "sv", "no", "nl"],
+      "url": "https://currentspot.app/index.de.html",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.zapp.wearos",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.zapp.wearos",
+      "image": "https://currentspot.app/assets/hero.png",
+      "screenshot": [
+        "https://currentspot.app/assets/price_home.png",
+        "https://currentspot.app/assets/graph.png",
+        "https://currentspot.app/assets/pricelist.png",
+        "https://currentspot.app/assets/complication.png"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ivan Kablar"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Brauche ich ein Tibber-Konto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, du brauchst ein aktives Tibber-Konto. Die App zeigt deine persönlichen Strompreise von Tibber an."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist Current Spot eine offizielle Tibber-App?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Current Spot ist eine inoffizielle, von der Community entwickelte App. Sie steht in keinerlei Verbindung mit Tibber AS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Geräte werden unterstützt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current Spot läuft auf allen Wear-OS-Geräten ab Wear OS 3.0, z.B. Samsung Galaxy Watch 4, 5, 6 und 7, Google Pixel Watch und weitere Wear-OS-Smartwatches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie verbinde ich mein Tibber-Konto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Installiere die Begleit-App auf deinem Smartphone, erstelle unter developer.tibber.com einen persönlichen Zugriffstoken und koppele deine Uhr per Bluetooth oder WiFi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert die App ohne Smartphone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Nach der Einrichtung kann die Uhr Preise direkt per WiFi oder LTE abrufen. Für Live-Verbrauchsdaten bietet das Bluetooth-Relay über die Begleit-App auf dem Smartphone eine stromsparende Alternative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist Current Spot kostenlos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Current Spot ist kostenlos. Alle Kernfunktionen sind ohne Kosten nutzbar. Optionale Spenden schalten einige Premium-Extras wie Live-Verbrauch-Komplikationen frei."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <header class="site-nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo" aria-label="Current Spot Startseite">
+                <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+                    <circle cx="16" cy="16" r="15" fill="#8B5CF6"/>
+                    <path d="M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z" fill="white"/>
+                </svg>
+                <span>Current Spot</span>
+            </a>
+            <nav class="nav-links" aria-label="Hauptnavigation">
+                <a href="#features">Funktionen</a>
+                <a href="#why">Warum</a>
+                <a href="#getting-started">Einrichtung</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch" aria-label="Sprachwechsler">
+                    <a href="index.html" hreflang="en">EN</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="index.de.html" class="active" aria-current="page">DE</a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" class="btn btn-primary btn-compact" target="_blank" rel="noopener">Installieren</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 2L10 6L14 7L11 10L12 14L8 12L4 14L5 10L2 7L6 6L8 2Z" fill="currentColor"/>
+                </svg>
+                Funktioniert mit Tibber
+            </div>
+            <h1 class="hero-title">
+                Strompreise direkt<br>
+                <span class="gradient-text">auf deinem Handgelenk</span>
+            </h1>
+            <p class="hero-subtitle">
+                Current Spot bringt Tibber-Spotpreise und Live-Verbrauchsdaten auf deine Wear OS Smartwatch.<br>
+                Ohne dein Smartphone in die Hand zu nehmen.
+            </p>
+            <div class="hero-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12M20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" fill="currentColor"/>
+                    </svg>
+                    Im Google Play Store laden
+                </a>
+                <a href="#features" class="btn btn-secondary">Mehr erfahren</a>
+            </div>
+            <div class="hero-image">
+                <div class="watch-mockup">
+                    <div class="watch-screen">
+                        <img src="assets/hero.png" alt="Current Spot auf einer Smartwatch mit aktuellem Strompreis" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+            <p class="disclaimer">
+                <small>Inoffizielle Drittanbieter-App &bull; Nicht verbunden mit Tibber AS</small>
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Alles Wichtige auf einen Blick</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Echtzeit-Preise</h3>
+                    <p>Aktuelle Strompreise alle 15 Minuten oder stündlich aktualisiert, direkt auf dem Zifferblatt.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>48h Preis-Graph</h3>
+                    <p>Interaktiver Graph mit Preisverlauf für heute und morgen – stündlich und im 15-Minuten-Takt.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Live-Verbrauch</h3>
+                    <p>Überwache deinen aktuellen Stromverbrauch direkt am Handgelenk. Voraussetzung: Tibber Pulse.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Günstigste Stunden</h3>
+                    <p>Berechnet automatisch die günstigsten Zeitfenster in den nächsten 24–48 Stunden.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌚</div>
+                    <h3>Komplikationen &amp; Tiles</h3>
+                    <p>Füge Komplikationen zu jedem Zifferblatt hinzu oder nutze das Tile für schnellen Zugriff ohne App-Start.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>Bluetooth-Relay &amp; WiFi</h3>
+                    <p>Verbindung per Bluetooth über dein Smartphone für stromsparendes Live-Daten, oder direkt per WiFi/LTE.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warum Current Spot (USP) -->
+    <section id="why" class="why">
+        <div class="container">
+            <h2 class="section-title">Warum Current Spot statt der offiziellen Tibber-App?</h2>
+            <p class="section-lead">Die offizielle Tibber-App ist toll auf dem Smartphone – aber es gibt keine Tibber-App für Wear OS. Current Spot füllt genau diese Lücke.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>⌚ Für die Uhr gemacht</h3>
+                    <p>Runde Layouts, Krone-Scrolling und Zifferblatt-Komplikationen – von Anfang an für Wear OS entwickelt, keine auf klein geschrumpfte Handy-App.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🔒 Vollständig privat</h3>
+                    <p>Keine Analytics, keine Werbung, kein Tracking. Dein Tibber-Token liegt nur auf deinen Geräten und wird direkt gegen die offizielle Tibber-API verwendet.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🌐 Offline-first</h3>
+                    <p>Preise für heute und morgen werden auf der Uhr gespeichert. Einmal abgerufen, funktioniert die App auch ohne Verbindung weiter.</p>
+                </div>
+                <div class="why-card">
+                    <h3>📡 Smarte Verbindung</h3>
+                    <p>Nutzt dein Smartphone als stromsparendes Bluetooth-Relay, und schaltet automatisch auf WiFi/LTE um, wenn das Smartphone außer Reichweite ist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">So sieht es aus</h2>
+            <div class="screenshot-gallery">
+                <div class="screenshot-item">
+                    <img src="assets/price_home.png" alt="Startseite – aktueller Strompreis in großer Schrift">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/graph.png" alt="48h Graph – Strompreisverlauf für heute und morgen">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/pricelist.png" alt="Preisliste – stündliche Preise mit farblicher Kennzeichnung">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/complication.png" alt="Zifferblatt-Komplikation mit aktuellem Preis">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Einrichtung -->
+    <section id="getting-started" class="getting-started">
+        <div class="container">
+            <h2 class="section-title">In 4 Schritten startklar</h2>
+            <ol class="steps">
+                <li>
+                    <h3>1. Apps installieren</h3>
+                    <p>Installiere <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" target="_blank" rel="noopener">Current Spot</a> aus dem Google Play Store auf deinem Smartphone und deiner Wear OS Uhr. Beide Apps sind im selben Play-Store-Eintrag enthalten.</p>
+                </li>
+                <li>
+                    <h3>2. Tibber-Zugriffstoken holen</h3>
+                    <p>Melde dich auf <a href="https://developer.tibber.com" target="_blank" rel="noopener">developer.tibber.com</a> mit deinem Tibber-Konto an und erstelle einen persönlichen Zugriffstoken. Aktiviere die Berechtigungen <em>home</em> und <em>real-time</em>, wenn du Live-Verbrauch nutzen möchtest.</p>
+                </li>
+                <li>
+                    <h3>3. Token in der Begleit-App eingeben</h3>
+                    <p>Öffne die Current Spot Begleit-App auf deinem Smartphone, füge den Token ein und wähle dein Zuhause aus. Die App prüft den Token sofort bei Tibber.</p>
+                </li>
+                <li>
+                    <h3>4. Uhr koppeln</h3>
+                    <p>Öffne Current Spot auf der Uhr. Die Konfiguration wird automatisch per Bluetooth von deinem Smartphone übernommen. Füge die Komplikation zu deinem Lieblings-Zifferblatt hinzu oder pinne das Tile für Zugriff mit einem Wisch.</p>
+                </li>
+            </ol>
+            <p class="steps-note">Brauchst du Hilfe? <a href="https://github.com/IvanKablar/current_spot_support/issues" target="_blank" rel="noopener">Erstelle ein Issue auf GitHub</a> – Antwort meistens innerhalb von 24 Stunden.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Brauche ich ein Tibber-Konto?</h3>
+                    <p>Ja, du brauchst ein aktives Tibber-Konto. Die App zeigt deine persönlichen Strompreise von Tibber an.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Ist das eine offizielle Tibber-App?</h3>
+                    <p>Nein. Current Spot ist eine inoffizielle, von der Community entwickelte App. Sie steht in keinerlei Verbindung mit Tibber AS.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Welche Geräte werden unterstützt?</h3>
+                    <p>Current Spot läuft auf allen Wear-OS-Geräten ab Wear OS 3.0 – z.B. Samsung Galaxy Watch 4, 5, 6 und 7, Google Pixel Watch und weitere Wear-OS-Smartwatches.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Wie verbinde ich mein Tibber-Konto?</h3>
+                    <p>Installiere die Begleit-App auf deinem Smartphone, erstelle unter developer.tibber.com einen persönlichen Zugriffstoken und koppele deine Uhr per Bluetooth oder WiFi.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Funktioniert die App ohne Smartphone?</h3>
+                    <p>Ja! Nach der Einrichtung kann die Uhr Preise direkt per WiFi oder LTE abrufen. Für Live-Verbrauchsdaten bietet das Bluetooth-Relay über die Begleit-App eine stromsparende Alternative.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Ist die App kostenlos?</h3>
+                    <p>Current Spot ist kostenlos. Alle Kernfunktionen sind ohne Kosten nutzbar. Optionale Spenden schalten Live-Verbrauch-Komplikationen und Bonus-Zifferblätter frei.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Bereit, deine Strompreise im Blick zu behalten?</h2>
+            <p>Lade Current Spot jetzt herunter und bleib über Energiekosten informiert.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12M20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" fill="currentColor"/>
+                </svg>
+                Jetzt bei Google Play laden
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Current Spot</h4>
+                    <p>Inoffizielle Tibber-Begleit-App für Wear OS.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" target="_blank" rel="noopener">Google Play</a></li>
+                        <li><a href="https://github.com/IvanKablar/current_spot_support" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://tibber.com" target="_blank" rel="noopener">Tibber</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="privacy.de.html">Datenschutzerklärung</a></li>
+                        <li><a href="imprint.de.html">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sprache</h4>
+                    <ul>
+                        <li><a href="index.html" hreflang="en">English</a></li>
+                        <li><a href="index.de.html" aria-current="page">Deutsch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Diese App steht in keinerlei Verbindung mit Tibber AS, wird von dieser weder unterstützt noch offiziell bestätigt. Alle Produktnamen, Logos und Marken sind Eigentum der jeweiligen Inhaber. Tibber ist eine eingetragene Marke der Tibber AS.</p>
+                <p>&copy; 2026 Current Spot. Mit ⚡ für die Tibber-Community gemacht.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
