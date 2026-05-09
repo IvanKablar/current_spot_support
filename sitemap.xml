@@ -5,8 +5,11 @@
     <loc>https://currentspot.app/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/index.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/index.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/index.no.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://currentspot.app/"/>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,8 +17,47 @@
     <loc>https://currentspot.app/index.de.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/index.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/index.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/index.no.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://currentspot.app/"/>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/index.nl.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/index.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/index.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/index.no.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://currentspot.app/"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/index.sv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/index.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/index.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/index.no.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://currentspot.app/"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/index.no.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/index.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/index.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/index.no.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://currentspot.app/"/>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -59,7 +101,10 @@
     <loc>https://currentspot.app/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/privacy.de.html"/>
-    <lastmod>2026-04-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/privacy.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/privacy.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/privacy.no.html"/>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -67,7 +112,43 @@
     <loc>https://currentspot.app/privacy.de.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/privacy.de.html"/>
-    <lastmod>2026-04-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/privacy.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/privacy.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/privacy.no.html"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/privacy.nl.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/privacy.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/privacy.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/privacy.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/privacy.no.html"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/privacy.sv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/privacy.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/privacy.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/privacy.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/privacy.no.html"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/privacy.no.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/privacy.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/privacy.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/privacy.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/privacy.no.html"/>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -75,7 +156,10 @@
     <loc>https://currentspot.app/imprint.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/imprint.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/imprint.de.html"/>
-    <lastmod>2026-04-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/imprint.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/imprint.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/imprint.no.html"/>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -83,7 +167,43 @@
     <loc>https://currentspot.app/imprint.de.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/imprint.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/imprint.de.html"/>
-    <lastmod>2026-04-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/imprint.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/imprint.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/imprint.no.html"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/imprint.nl.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/imprint.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/imprint.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/imprint.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/imprint.no.html"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/imprint.sv.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/imprint.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/imprint.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/imprint.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/imprint.no.html"/>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://currentspot.app/imprint.no.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://currentspot.app/imprint.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://currentspot.app/imprint.de.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://currentspot.app/imprint.nl.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://currentspot.app/imprint.sv.html"/>
+    <xhtml:link rel="alternate" hreflang="no" href="https://currentspot.app/imprint.no.html"/>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -11,31 +11,47 @@ export default {
       const isBot = /bot|crawl|spider|slurp|facebookexternalhit|twitterbot|whatsapp|telegram|discord|linkedinbot|embedly|preview/i.test(userAgent);
       const isApple = !isBot && /Macintosh|iPhone|iPad|iPod/.test(userAgent);
 
-      const langCookie = cookie.match(/lang=(en|de)/);
+      const langCookie = cookie.match(/lang=(en|de|nl|sv|no)/);
       const platformCookie = cookie.match(/platform=(ios|wearos)/);
 
-      // Resolve language preference
+      // Resolve language preference (cookie wins, otherwise Accept-Language)
       let lang = "en";
       if (langCookie) {
         lang = langCookie[1];
       } else if (/^de|,\s*de/i.test(acceptLang)) {
         lang = "de";
+      } else if (/^nl|,\s*nl/i.test(acceptLang)) {
+        lang = "nl";
+      } else if (/^sv|,\s*sv/i.test(acceptLang)) {
+        lang = "sv";
+      } else if (/^(no|nb|nn)|,\s*(no|nb|nn)/i.test(acceptLang)) {
+        lang = "no";
       }
+
+      // iOS landing only exists in EN/DE — non-Apple langs fall back to EN iOS page
+      const iosTarget = lang === "de" ? "/ios.de.html" : "/ios.html";
+      const wearTarget = (
+        lang === "de" ? "/index.de.html" :
+        lang === "nl" ? "/index.nl.html" :
+        lang === "sv" ? "/index.sv.html" :
+        lang === "no" ? "/index.no.html" :
+        null
+      );
 
       // Platform override — honor cookie first
       if (platformCookie) {
         if (platformCookie[1] === "ios") {
-          return Response.redirect(new URL(lang === "de" ? "/ios.de.html" : "/ios.html", url.origin), 302);
+          return Response.redirect(new URL(iosTarget, url.origin), 302);
         }
-        // "wearos" cookie → fall through to serve Wear OS page (or redirect DE)
+        // "wearos" cookie → fall through to serve Wear OS page (or redirect to localized one)
       } else if (isApple) {
         // No platform cookie, Apple device → send to iOS page
-        return Response.redirect(new URL(lang === "de" ? "/ios.de.html" : "/ios.html", url.origin), 302);
+        return Response.redirect(new URL(iosTarget, url.origin), 302);
       }
 
-      // Non-Apple: redirect DE users to German Wear OS homepage
-      if (lang === "de") {
-        return Response.redirect(new URL("/index.de.html", url.origin), 302);
+      // Non-Apple: redirect localized users to their Wear OS homepage
+      if (wearTarget) {
+        return Response.redirect(new URL(wearTarget, url.origin), 302);
       }
     }
 
@@ -52,6 +68,9 @@ export default {
 
     if (url.pathname === "/index.html")     return setCookie("en", "wearos");
     if (url.pathname === "/index.de.html")  return setCookie("de", "wearos");
+    if (url.pathname === "/index.nl.html")  return setCookie("nl", "wearos");
+    if (url.pathname === "/index.sv.html")  return setCookie("sv", "wearos");
+    if (url.pathname === "/index.no.html")  return setCookie("no", "wearos");
     if (url.pathname === "/ios.html")       return setCookie("en", "ios");
     if (url.pathname === "/ios.de.html")    return setCookie("de", "ios");
 

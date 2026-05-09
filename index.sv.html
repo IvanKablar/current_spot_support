@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8B5CF6">
+
+    <title>Inofficiell klock-app för Tibber-kunder – Wear OS &amp; Galaxy Watch | Current Spot</title>
+    <meta name="description" content="Current Spot är den inofficiella klock-appen för Tibber-kunder på Wear OS. Spotpriser, live effekt från Tibber Pulse och billigaste timmarna på Galaxy Watch, Pixel Watch och alla Wear OS-smartklockor.">
+    <meta name="keywords" content="inofficiell Tibber-klockapp, klockapp för Tibber-kunder, Tibber smartklocka-app, Tibber Wear OS, Tibber Galaxy Watch, Tibber Pixel Watch, Tibber app för klocka, Tibber Pulse klocka, elpriser smartklocka, spotpris klocka, rörligt elavtal klocka, WearOS Tibber, elpris idag, timpris">
+    <meta name="author" content="Ivan Kablar">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://currentspot.app/index.sv.html">
+    <link rel="alternate" hreflang="en" href="https://currentspot.app/">
+    <link rel="alternate" hreflang="de" href="https://currentspot.app/index.de.html">
+    <link rel="alternate" hreflang="nl" href="https://currentspot.app/index.nl.html">
+    <link rel="alternate" hreflang="sv" href="https://currentspot.app/index.sv.html">
+    <link rel="alternate" hreflang="no" href="https://currentspot.app/index.no.html">
+    <link rel="alternate" hreflang="x-default" href="https://currentspot.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Current Spot">
+    <meta property="og:title" content="Inofficiell klock-app för Tibber-kunder – Wear OS &amp; Galaxy Watch | Current Spot">
+    <meta property="og:description" content="Den inofficiella klock-appen för Tibber-kunder på Wear OS: spotpriser, Tibber Pulse live effekt och billigaste timmarna på Galaxy Watch och Pixel Watch.">
+    <meta property="og:url" content="https://currentspot.app/index.sv.html">
+    <meta property="og:image" content="https://currentspot.app/assets/hero.png">
+    <meta property="og:image:width" content="396">
+    <meta property="og:image:height" content="396">
+    <meta property="og:image:alt" content="Inofficiell klock-app för Tibber-kunder på Wear OS som visar aktuellt elspotpris på en smartklocka">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inofficiell klock-app för Tibber-kunder – Wear OS &amp; Galaxy Watch | Current Spot">
+    <meta name="twitter:description" content="Den inofficiella klock-appen för Tibber-kunder på Wear OS: spotpriser, Tibber Pulse live effekt och billigaste timmarna på Galaxy Watch och Pixel Watch.">
+    <meta name="twitter:image" content="https://currentspot.app/assets/hero.png">
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%238B5CF6'/%3E%3Cpath d='M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z' fill='white'/%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Current Spot",
+      "alternateName": ["Tibber-klockapp för Wear OS", "Tibber smartklocka-app", "Tibber-app för Galaxy Watch", "Tibber-app för Pixel Watch"],
+      "operatingSystem": "Wear OS 3.0+, Android 8.0+",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Energy",
+      "description": "Inofficiell Tibber-följeslagare-app för Wear OS. Visar spotpriser i realtid, en 48-timmars prisgraf, billigaste timmarna och live effekt från en Tibber Pulse direkt på din smartklocka.",
+      "inLanguage": ["sv", "en", "de", "no", "nl"],
+      "url": "https://currentspot.app/index.sv.html",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.zapp.wearos",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.zapp.wearos",
+      "image": "https://currentspot.app/assets/hero.png",
+      "screenshot": [
+        "https://currentspot.app/assets/price_home.png",
+        "https://currentspot.app/assets/graph.png",
+        "https://currentspot.app/assets/pricelist.png",
+        "https://currentspot.app/assets/complication.png"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SEK" },
+      "author": { "@type": "Person", "name": "Ivan Kablar" },
+      "publisher": { "@type": "Person", "name": "Ivan Kablar" }
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Finns det en Tibber-klockapp för Wear OS?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tibber publicerar ingen officiell klock-app. Current Spot är en community-byggd Tibber-klockapp för Wear OS som visar dina Tibber-spotpriser, Tibber Pulse live-effekt och de billigaste timmarna direkt på Galaxy Watch, Pixel Watch och alla andra Wear OS-smartklockor." } },
+        { "@type": "Question", "name": "Har Tibber en app för Galaxy Watch?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tibber själva levererar ingen Galaxy Watch-app. Current Spot fyller den luckan och fungerar på Samsung Galaxy Watch 4, 5, 6 och 7, Google Pixel Watch och alla andra Wear OS 3.0+-smartklockor." } },
+        { "@type": "Question", "name": "Behöver jag ett Tibber-konto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja, du behöver ett aktivt Tibber-konto. Appen visar dina personliga elpriser från Tibber." } },
+        { "@type": "Question", "name": "Är detta en officiell Tibber-app?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nej. Current Spot är en inofficiell, community-utvecklad app. Den är inte ansluten till, godkänd av eller officiellt kopplad till Tibber AS." } },
+        { "@type": "Question", "name": "Vilka enheter stöds?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Current Spot fungerar på alla Wear OS-enheter med Wear OS 3.0 eller senare, inklusive Samsung Galaxy Watch 4, 5, 6 och 7, Google Pixel Watch och andra Wear OS-smartklockor." } },
+        { "@type": "Question", "name": "Hur kopplar jag mitt Tibber-konto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Installera Current Spot-följeslagaren på din telefon, skapa en personlig åtkomsttoken på developer.tibber.com och para ihop klockan via Bluetooth eller Wi-Fi." } },
+        { "@type": "Question", "name": "Fungerar det utan telefon?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. När appen är konfigurerad kan klockan hämta priser direkt via Wi-Fi eller LTE. För live-effekt erbjuder Bluetooth-reläet via följeslagar-appen ett energieffektivt alternativ." } },
+        { "@type": "Question", "name": "Är Current Spot gratis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Current Spot är gratis att ladda ner och använda. Alla huvudfunktioner ingår utan kostnad. Frivilliga donationer låser upp några premium-tillägg som live-effekt-complications." } }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <header class="site-nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo" aria-label="Current Spot startsida">
+                <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+                    <circle cx="16" cy="16" r="15" fill="#8B5CF6"/>
+                    <path d="M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z" fill="white"/>
+                </svg>
+                <span>Current Spot</span>
+            </a>
+            <nav class="nav-links" aria-label="Huvudnavigering">
+                <a href="#features">Funktioner</a>
+                <a href="#why">Varför</a>
+                <a href="#getting-started">Installation</a>
+                <a href="#faq">FAQ</a>
+                <a href="ios.html">iOS</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch" aria-label="Språkväljare">
+                    <a href="index.html" hreflang="en">EN</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="index.de.html" hreflang="de">DE</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="index.nl.html" hreflang="nl">NL</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="index.sv.html" class="active" aria-current="page">SV</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="index.no.html" hreflang="no">NO</a>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" class="btn btn-primary btn-compact" target="_blank" rel="noopener">Installera</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 2L10 6L14 7L11 10L12 14L8 12L4 14L5 10L2 7L6 6L8 2Z" fill="currentColor"/>
+                </svg>
+                Fungerar med Tibber
+            </div>
+            <h1 class="hero-title">
+                Den inofficiella klock-appen för Tibber-kunder<br>
+                <span class="gradient-text">på Wear OS &amp; Galaxy Watch</span>
+            </h1>
+            <p class="hero-subtitle">
+                Current Spot är den inofficiella klock-appen för Tibber-kunder på Wear OS — spotpriser, Tibber Pulse live-effekt och de billigaste timmarna direkt på din Galaxy Watch, Pixel Watch eller valfri Wear OS-smartklocka.<br>
+                Utan att ta upp telefonen.
+            </p>
+            <div class="hero-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12M20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" fill="currentColor"/>
+                    </svg>
+                    Hämta på Google Play
+                </a>
+                <a href="#features" class="btn btn-secondary">Läs mer</a>
+            </div>
+            <div class="hero-image">
+                <div class="watch-mockup">
+                    <div class="watch-screen">
+                        <img src="assets/hero.png" alt="Inofficiell klock-app för Tibber-kunder på Wear OS som visar aktuellt elspotpris på en Galaxy Watch" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+            <p class="disclaimer">
+                <small>Inofficiell tredjeparts-app &bull; Inte ansluten till Tibber AS</small>
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Allt du behöver – på en gång</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Realtidspriser</h3>
+                    <p>Aktuella elpriser uppdateras var 15:e minut eller varje timme – direkt på klockan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>48-timmars prisgraf</h3>
+                    <p>Interaktiv graf med pristrender för idag och imorgon, både per timme och per kvart.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Live elförbrukning</h3>
+                    <p>Övervaka din strömförbrukning i realtid direkt från handleden. Kräver en Tibber Pulse.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Billigaste timmarna</h3>
+                    <p>Beräknar automatiskt de billigaste timmarna att använda el under nästa 24–48 timmar.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌚</div>
+                    <h3>Complications &amp; tiles</h3>
+                    <p>Lägg till complications på valfri urtavla eller använd tile för snabbåtkomst utan att öppna appen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>Bluetooth-relä &amp; Wi-Fi</h3>
+                    <p>Anslut via Bluetooth genom telefonen för energieffektiv live-data, eller använd Wi-Fi/LTE fristående.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Current Spot (USP) -->
+    <section id="why" class="why">
+        <div class="container">
+            <h2 class="section-title">Varför Current Spot?</h2>
+            <p class="section-lead">Snabb, privat och byggd för handleden — Current Spot tar din Tibber-data direkt till handleden, utan att du behöver ta upp telefonen.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>⌚ Byggd för handleden</h3>
+                    <p>Runda layouter, scrollning med kronan och urtavla-complications – designad för Wear OS från dag ett, inte en mobilapp inklämd på liten skärm.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🔒 Helt privat</h3>
+                    <p>Ingen analys, ingen reklam, ingen spårning. Din Tibber-token finns bara på dina egna enheter och används direkt mot Tibbers officiella API.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🌐 Offline-first</h3>
+                    <p>Dagens och morgondagens priser cachas på klockan. När de hämtats fungerar appen även utan uppkoppling.</p>
+                </div>
+                <div class="why-card">
+                    <h3>📡 Smart anslutning</h3>
+                    <p>Använder telefonen som energieffektivt Bluetooth-relä när den är parad, och växlar automatiskt till Wi-Fi/LTE när telefonen är utom räckhåll.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <h2 class="section-title">Så här ser det ut</h2>
+            <div class="screenshot-gallery">
+                <div class="screenshot-item">
+                    <img src="assets/price_home.png" alt="Startskärm – aktuellt elpris i stor stil">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/graph.png" alt="48-timmars graf – elpristrender för idag och imorgon">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/pricelist.png" alt="Prislista – timpriser med färgkodning">
+                </div>
+                <div class="screenshot-item">
+                    <img src="assets/complication.png" alt="Urtavla-complication med aktuellt pris">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started -->
+    <section id="getting-started" class="getting-started">
+        <div class="container">
+            <h2 class="section-title">Kom igång på 4 steg</h2>
+            <ol class="steps">
+                <li>
+                    <h3>1. Installera apparna</h3>
+                    <p>Installera <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" target="_blank" rel="noopener">Current Spot</a> från Google Play på både telefonen och din Wear OS-klocka. Båda apparna ligger i samma listning på Play Store.</p>
+                </li>
+                <li>
+                    <h3>2. Skapa din Tibber-åtkomsttoken</h3>
+                    <p>Logga in på <a href="https://developer.tibber.com" target="_blank" rel="noopener">developer.tibber.com</a> med ditt Tibber-konto och skapa en personlig åtkomsttoken. Se till att <em>home</em> och <em>real-time</em> är aktiverade om du vill se live-effekt.</p>
+                </li>
+                <li>
+                    <h3>3. Ange token i följeslagar-appen</h3>
+                    <p>Öppna Current Spot-följeslagaren på telefonen, klistra in din token och välj hemmet du vill övervaka. Appen verifierar token mot Tibber direkt.</p>
+                </li>
+                <li>
+                    <h3>4. Para ihop klockan</h3>
+                    <p>Öppna Current Spot på klockan. Konfigurationen hämtas automatiskt via Bluetooth från telefonen. Lägg till complication på din favoriturtavla eller fäst tile för åtkomst med ett svep.</p>
+                </li>
+            </ol>
+            <p class="steps-note">Behöver du hjälp? <a href="https://github.com/IvanKablar/current_spot_support/issues" target="_blank" rel="noopener">Skapa en issue på GitHub</a> – vanligtvis besvarad inom 24 timmar.</p>
+            <p class="steps-note">Se den detaljerade <a href="tibber-galaxy-watch.html">installationsguiden för Tibber på Galaxy Watch &amp; Wear OS</a> med tips per modell (Galaxy Watch 4/5/6/7, Pixel Watch 1/2/3).</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Vanliga frågor</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Finns det en Tibber-klockapp för Wear OS?</h3>
+                    <p>Tibber publicerar ingen officiell klock-app. Current Spot är en community-byggd <strong>Tibber-klockapp för Wear OS</strong> — den visar Tibber-spotpriser, Tibber Pulse live-effekt och de billigaste timmarna direkt på Galaxy Watch, Pixel Watch och alla andra Wear OS-smartklockor.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Har Tibber en app för Galaxy Watch?</h3>
+                    <p>Tibber själva levererar ingen Galaxy Watch-app. Current Spot fyller den luckan och fungerar på Samsung Galaxy Watch 4, 5, 6 och 7, Google Pixel Watch och alla andra Wear OS 3.0+-smartklockor.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Behöver jag ett Tibber-konto?</h3>
+                    <p>Ja, du behöver ett aktivt Tibber-konto. Appen visar dina personliga elpriser från Tibber.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Är detta en officiell Tibber-app?</h3>
+                    <p>Nej. Current Spot är en inofficiell, community-utvecklad app. Den är inte ansluten till, godkänd av eller officiellt kopplad till Tibber AS.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Vilka enheter stöds?</h3>
+                    <p>Current Spot fungerar på alla Wear OS-enheter med Wear OS 3.0 eller senare, t.ex. Samsung Galaxy Watch 4, 5, 6 och 7, Google Pixel Watch och andra Wear OS-smartklockor.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Hur kopplar jag mitt Tibber-konto?</h3>
+                    <p>Installera följeslagar-appen på telefonen, skapa en personlig åtkomsttoken på developer.tibber.com och para ihop klockan via Bluetooth eller Wi-Fi.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Fungerar appen utan telefon?</h3>
+                    <p>Ja! När appen är konfigurerad kan klockan hämta priser direkt via Wi-Fi eller LTE. För live-effekt erbjuder Bluetooth-reläet via följeslagar-appen ett energieffektivt alternativ.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Är appen gratis?</h3>
+                    <p>Current Spot är gratis att ladda ner och använda. Alla huvudfunktioner ingår utan kostnad. Frivilliga donationer låser upp live-effekt-complications och bonus-urtavlor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Redo att hålla koll på dina elpriser?</h2>
+            <p>Ladda ner Current Spot nu och håll dig informerad om energikostnaderna.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5M16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12M20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81M6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z" fill="currentColor"/>
+                </svg>
+                Hämta på Google Play
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Current Spot</h4>
+                    <p>Inofficiell Tibber-följeslagare för Wear OS.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Länkar</h4>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.zapp.wearos" target="_blank" rel="noopener">Google Play</a></li>
+                        <li><a href="https://github.com/IvanKablar/current_spot_support" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://tibber.com" target="_blank" rel="noopener">Tibber</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Juridiskt</h4>
+                    <ul>
+                        <li><a href="privacy.sv.html">Integritetspolicy</a></li>
+                        <li><a href="imprint.sv.html">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Språk</h4>
+                    <ul>
+                        <li><a href="index.html" hreflang="en">English</a></li>
+                        <li><a href="index.de.html" hreflang="de">Deutsch</a></li>
+                        <li><a href="index.nl.html" hreflang="nl">Nederlands</a></li>
+                        <li><a href="index.sv.html" aria-current="page">Svenska</a></li>
+                        <li><a href="index.no.html" hreflang="no">Norsk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Den här appen är inte ansluten till, godkänd av eller på något sätt officiellt kopplad till Tibber AS. Alla produktnamn, logotyper och varumärken tillhör respektive ägare. Tibber är ett registrerat varumärke som tillhör Tibber AS.</p>
+                <p>&copy; 2026 Current Spot. Gjord med ⚡ för Tibber-communityn.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

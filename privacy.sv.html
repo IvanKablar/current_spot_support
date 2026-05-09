@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8B5CF6">
+    <meta name="robots" content="noindex, follow">
+    <title>Integritetspolicy – Current Spot</title>
+    <meta name="description" content="Integritetspolicy för Current Spot Wear OS-app. Data lagras lokalt på dina enheter. Ingen spårning, ingen analys, ingen reklam.">
+    <link rel="canonical" href="https://currentspot.app/privacy.sv.html">
+    <link rel="alternate" hreflang="en" href="https://currentspot.app/privacy.html">
+    <link rel="alternate" hreflang="de" href="https://currentspot.app/privacy.de.html">
+    <link rel="alternate" hreflang="nl" href="https://currentspot.app/privacy.nl.html">
+    <link rel="alternate" hreflang="sv" href="https://currentspot.app/privacy.sv.html">
+    <link rel="alternate" hreflang="no" href="https://currentspot.app/privacy.no.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%238B5CF6'/%3E%3Cpath d='M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z' fill='white'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-nav">
+        <div class="container nav-container">
+            <a href="index.sv.html" class="nav-logo">
+                <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#8B5CF6"/><path d="M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z" fill="white"/></svg>
+                <span>Current Spot</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.sv.html#features">Funktioner</a>
+                <a href="index.sv.html#why">Varför</a>
+                <a href="index.sv.html#getting-started">Installation</a>
+                <a href="index.sv.html#faq">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-switch">
+                    <a href="privacy.html" hreflang="en">EN</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="privacy.de.html" hreflang="de">DE</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="privacy.nl.html" hreflang="nl">NL</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="privacy.sv.html" class="active" aria-current="page">SV</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="privacy.no.html" hreflang="no">NO</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="legal">
+        <div class="container">
+            <h1>Integritetspolicy</h1>
+            <p class="legal-lead">Current Spot – Wear OS-app. Senast uppdaterad: 16 april 2026.</p>
+
+            <h2>1. Personuppgiftsansvarig</h2>
+            <p>Personuppgiftsansvarig enligt EU:s allmänna dataskyddsförordning (GDPR) och andra nationella dataskyddslagar:</p>
+            <p>Ivan Kablar<br>Carl-Sonnenschein-Straße 31<br>65936 Frankfurt am Main<br>Tyskland<br>E-post: <a href="mailto:ivankablar25@gmail.com">ivankablar25@gmail.com</a></p>
+
+            <h2>2. Datainsamling och lagring i appen</h2>
+            <p>Current Spot-appen lagrar följande data <strong>lokalt på dina enheter</strong>:</p>
+            <ul>
+                <li><strong>Tibber-åtkomsttoken</strong>: Din personliga Tibber API-token, lagrad på telefonen och synkroniserad till Wear OS-klockan.</li>
+                <li><strong>Hem-ID</strong>: Din Tibber Home-identifierare som används för att hämta elpriser.</li>
+                <li><strong>Elprisdata</strong>: Aktuella och prognostiserade priser från Tibber API.</li>
+                <li><strong>Appinställningar</strong>: Dina valda inställningar, t.ex. prisintervall (per timme / 15 minuter).</li>
+            </ul>
+            <p>All data lagras uteslutande på dina enheter. Ingen personlig data överförs till apputvecklaren. Inga analys- eller spårningstjänster används.</p>
+
+            <h2>3. Tredjepartstjänster</h2>
+            <h3>3.1 Tibber API</h3>
+            <p>Appen ansluter till det officiella Tibber API (<code>api.tibber.com</code>) för att hämta elpriser och, valfritt, live-effektdata från din Tibber Pulse.</p>
+            <ul>
+                <li>Överförd data: Åtkomsttoken, Hem-ID.</li>
+                <li>Mottagen data: Elpriser, prisnivåer, hemmainformation, live-effektmätningar.</li>
+                <li>Syfte: Visa aktuella och prognostiserade priser på din smartklocka.</li>
+                <li>Rättslig grund: Art. 6 (1) (b) GDPR — behandling som är nödvändig för fullgörande av ett avtal / begärd tjänst.</li>
+                <li>Leverantör: Tibber AS, integritetspolicy på <a href="https://tibber.com/en/privacy-policy" target="_blank" rel="noopener">tibber.com/en/privacy-policy</a>.</li>
+            </ul>
+            <h3>3.2 Google Play Services / Wear OS Data Layer</h3>
+            <p>Data Layer används för att synkronisera din åtkomsttoken och dina inställningar mellan telefon och klocka via en lokal kanal som tillhandahålls av Google Play Services. Ingen användardata delas med Google utöver vad som krävs för appens funktionalitet.</p>
+            <h3>3.3 Google Play Billing</h3>
+            <p>Om du väljer att göra en frivillig donation behandlas betalningen av Google Play Billing. Current Spot ser aldrig dina betaluppgifter; utvecklaren får endast en anonym bekräftelse på att ett köp har ägt rum. Integritetsinformation: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+            <h2>4. Webbhotell</h2>
+            <p>Denna webbplats hostas på <strong>Cloudflare Pages</strong> (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). När du besöker webbplatsen behandlar Cloudflare automatiskt teknisk information (t.ex. IP-adress, webbläsare, tidsstämpel) i syfte att leverera webbplatsen och förhindra missbruk. Rättslig grund: Art. 6 (1) (f) GDPR (berättigat intresse av säker drift). Internationell överföring täcks av EU-USA Data Privacy Framework. Cloudflares integritetspolicy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>
+
+            <h2>5. Cookies och analys</h2>
+            <p>Denna webbplats sätter <strong>inga</strong> cookies och använder <strong>inga</strong> analysverktyg, spårnings­pixlar, tredjepartsannonser eller sociala plug-ins. Ingen samtyckes­banner krävs eftersom inga personuppgifter behandlas utöver de tekniskt nödvändiga serverloggar som beskrivs i avsnitt 4.</p>
+
+            <h2>6. Datalagring</h2>
+            <p>Data i appen behålls endast så länge appen är installerad. Avinstallation raderar permanent all data från din enhet. Utvecklaren behåller ingen användardata på sina servrar (det finns inga).</p>
+
+            <h2>7. Dina rättigheter (GDPR)</h2>
+            <p>Du har följande rättigheter avseende dina personuppgifter:</p>
+            <ul>
+                <li>Rätt till tillgång (Art. 15 GDPR)</li>
+                <li>Rätt till rättelse (Art. 16 GDPR)</li>
+                <li>Rätt till radering (Art. 17 GDPR)</li>
+                <li>Rätt till begränsning av behandling (Art. 18 GDPR)</li>
+                <li>Rätt till dataportabilitet (Art. 20 GDPR)</li>
+                <li>Rätt att göra invändningar (Art. 21 GDPR)</li>
+            </ul>
+            <p>För att utöva dessa rättigheter, kontakta <a href="mailto:ivankablar25@gmail.com">ivankablar25@gmail.com</a>. Eftersom appen lagrar all data lokalt kan du också utöva de flesta rättigheter själv: exportera din token från appens inställningar, ändra ditt hemval, eller avinstallera appen för att radera allt.</p>
+
+            <h2>8. Rätt att lämna in klagomål</h2>
+            <p>Du har rätt att lämna in klagomål till en tillsynsmyndighet. Den ansvariga myndigheten för den personuppgiftsansvariga är:</p>
+            <p>Der Hessische Beauftragte für Datenschutz und Informationsfreiheit<br>Gustav-Stresemann-Ring 1<br>65189 Wiesbaden, Tyskland<br>Webbplats: <a href="https://datenschutz.hessen.de" target="_blank" rel="noopener">datenschutz.hessen.de</a></p>
+
+            <h2>9. Barn</h2>
+            <p>Appen är inte avsedd för barn under 16 år. Vi samlar inte medvetet in personuppgifter från barn.</p>
+
+            <h2>10. Ändringar av denna policy</h2>
+            <p>Vi kan uppdatera denna integritetspolicy då och då. Datumet högst upp på denna sida visar den senaste uppdateringen. Väsentliga ändringar kommer att meddelas i appen.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <p>&copy; 2026 Current Spot. Gjord med ⚡ för Tibber-communityn.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
