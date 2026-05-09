@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8B5CF6">
+
+<title>Current Spot for iPhone &amp; Apple Watch – Coming Soon</title>
+<meta name="description" content="Current Spot is coming to iPhone and Apple Watch. Tibber spot prices, Tibber Pulse live power and cheapest hours on iOS and watchOS. Join the launch list.">
+<meta name="keywords" content="Tibber Apple Watch, Tibber iPhone, Tibber iOS, Tibber watchOS, Tibber Apple Watch app, Tibber iOS app, Tibber smartwatch iPhone">
+<meta name="author" content="Ivan Kablar">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://currentspot.app/ios.html">
+<link rel="alternate" hreflang="en" href="https://currentspot.app/ios.html">
+<link rel="alternate" hreflang="de" href="https://currentspot.app/ios.de.html">
+<link rel="alternate" hreflang="x-default" href="https://currentspot.app/ios.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Current Spot">
+<meta property="og:title" content="Current Spot for iPhone &amp; Apple Watch – Coming Soon">
+<meta property="og:description" content="The unofficial watch app for Tibber customers — coming to Apple Watch &amp; iPhone. Tibber spot prices and Tibber Pulse live power on iOS and watchOS. Join the launch list.">
+<meta property="og:url" content="https://currentspot.app/ios.html">
+<meta property="og:image" content="https://currentspot.app/assets/ios-hero.png">
+<meta property="og:image:alt" content="Current Spot coming to iPhone and Apple Watch">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Current Spot for iPhone &amp; Apple Watch – Coming Soon">
+<meta name="twitter:description" content="The unofficial watch app for Tibber customers — coming to Apple Watch &amp; iPhone. Join the launch list.">
+<meta name="twitter:image" content="https://currentspot.app/assets/ios-hero.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%238B5CF6'/%3E%3Cpath d='M18 6 L10 18 L15 18 L13 26 L22 13 L17 13 Z' fill='white'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0A0B0D;
+  --bg-2:#101216;
+  --ink:#F2EEE6;
+  --ink-dim:#8A8A86;
+  --line:rgba(242,238,230,0.08);
+  --accent:#8B5CF6;
+  --accent-2:#A78BFA;
+  --amber:#E8B547;
+  --rose:#FF8A7A;
+  --chip-h:#B69CFF;
+  --chip-m:#7EE0FF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:'Geist',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;}
+body{overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+.display{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-0.02em;line-height:0.95}
+.mono{font-family:'Geist Mono',monospace;font-variant-numeric:tabular-nums;letter-spacing:-0.01em}
+.eyebrow{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-dim)}
+
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+@media (max-width:720px){.wrap{padding:0 20px}}
+
+/* TOP BAR */
+.topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(20px);background:rgba(10,11,13,0.72);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:-0.01em}
+.brand-mark{width:26px;height:26px;border-radius:50%;background:
+  conic-gradient(from -90deg, var(--accent) 0deg, var(--accent) 270deg, rgba(139,92,246,0.15) 270deg 360deg);
+  position:relative}
+.brand-mark::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--bg)}
+.nav{display:flex;gap:28px;font-size:14px;color:var(--ink-dim)}
+.nav a:hover{color:var(--ink)}
+.top-actions{display:flex;align-items:center;gap:18px;font-size:13px}
+.lang{color:var(--ink-dim);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.1em}
+.lang .on{color:var(--ink)}
+.notify-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--accent);color:#fff;font-weight:500;font-size:13px;transition:transform .2s}
+.notify-btn:hover{transform:translateY(-1px)}
+@media (max-width:780px){.nav{display:none}}
+
+/* LIVE TICKER */
+.ticker{border-bottom:1px solid var(--line);overflow:hidden;font-family:'Geist Mono',monospace;font-size:12px;color:var(--ink-dim);height:40px;display:flex;align-items:center}
+.ticker-track{display:flex;gap:48px;white-space:nowrap;animation:slide 60s linear infinite}
+.ticker-item{display:inline-flex;align-items:center;gap:10px}
+.ticker-item b{color:var(--ink);font-weight:500}
+.dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.dot.accent{background:var(--accent)}
+.dot.amber{background:var(--amber)}
+.dot.rose{background:var(--rose)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HERO */
+.hero{position:relative;padding:80px 0 40px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+
+.hero-title{font-size:clamp(56px,9vw,128px);line-height:0.92}
+.hero-title em{font-style:italic;color:var(--accent)}
+.hero-sub{margin-top:28px;max-width:500px;font-size:17px;line-height:1.55;color:var(--ink-dim)}
+.hero-sub b{color:var(--ink);font-weight:500}
+.hero-cta{margin-top:36px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;background:var(--accent);color:#fff;font-weight:500;font-size:14px;transition:transform .2s}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;border:1px solid var(--line);color:var(--ink);font-size:14px}
+.btn-ghost:hover{border-color:rgba(139,92,246,0.4)}
+.hero-meta{margin-top:24px;display:flex;gap:24px;font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim);letter-spacing:0.1em;text-transform:uppercase}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+
+.cs-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(139,92,246,0.4);color:var(--accent);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:28px}
+.cs-badge .dot{background:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* Hero art — giant watch face */
+.hero-art{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;margin-left:auto;justify-self:end}
+@media (max-width:960px){.hero-art{margin:0 auto;max-width:380px}}
+.hero-art svg.ring{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 0 80px rgba(139,92,246,0.25));animation:spin 40s linear infinite;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-art .face{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 40% 30%, #15181D 0%, #0A0B0D 75%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+.hero-art .face .unit{font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:0.2em;margin-bottom:4px}
+.hero-art .face .big{font-family:'Instrument Serif',serif;font-size:clamp(64px,12vw,120px);line-height:0.9;color:var(--accent-2);letter-spacing:-0.02em}
+.hero-art .face .sub{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim);margin-top:10px;letter-spacing:0.1em}
+
+.hero-labels{position:absolute;inset:0;pointer-events:none}
+.hero-labels .chip{position:absolute;background:rgba(16,18,22,0.92);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-family:'Geist Mono',monospace;font-size:11px;backdrop-filter:blur(8px);display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.chip.live{top:4%;left:0%;color:var(--accent)}
+.chip.cheap{bottom:6%;left:6%;color:var(--amber)}
+.chip.trend{top:10%;right:0%;color:var(--rose)}
+@media (max-width:500px){.chip.live{left:-4%}.chip.trend{right:-4%}}
+
+/* GRAPH STRIP */
+.graph-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0 32px;margin-top:40px;position:relative;overflow:hidden}
+.graph-strip .label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px}
+.graph-strip h4{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-dim);font-weight:400}
+.graph-strip .legend{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim);display:flex;gap:18px}
+.graph-strip .legend span{display:inline-flex;align-items:center;gap:6px}
+
+.bars{display:flex;align-items:flex-end;gap:3px;height:140px}
+.bar{flex:1;border-radius:2px 2px 0 0;min-height:4px}
+.bar.lo{background:var(--accent)}
+.bar.mid{background:var(--amber);opacity:0.85}
+.bar.hi{background:var(--rose);opacity:0.85}
+.hour-axis{display:flex;justify-content:space-between;margin-top:10px;font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-dim)}
+
+/* PITCH */
+.pitch{padding:140px 0 80px}
+.pitch-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px}
+@media (max-width:880px){.pitch-grid{grid-template-columns:1fr;gap:32px}}
+.pitch h2{font-family:'Instrument Serif',serif;font-size:clamp(40px,5vw,72px);line-height:0.98;letter-spacing:-0.02em}
+.pitch h2 em{font-style:italic;color:var(--accent)}
+.pitch p.lead{font-size:19px;line-height:1.55;color:var(--ink)}
+.pitch p.lead + p{margin-top:18px;color:var(--ink-dim);font-size:16px;line-height:1.6}
+
+/* FEATURES */
+.features{padding:60px 0}
+.features-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.features-head h3{font-family:'Instrument Serif',serif;font-size:36px;font-weight:400}
+.features-head span{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim);letter-spacing:0.15em;text-transform:uppercase}
+
+.feat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+@media (max-width:960px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+.feat{border:1px solid var(--line);border-radius:22px;padding:28px;background:var(--bg-2);position:relative;overflow:hidden;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .3s}
+.feat:hover{border-color:rgba(139,92,246,0.3)}
+.feat.wide{grid-column:span 3}
+.feat.tall{grid-column:span 3;min-height:340px}
+.feat.small{grid-column:span 2}
+@media (max-width:960px){.feat.wide,.feat.tall,.feat.small{grid-column:span 2}}
+.feat .num{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim);letter-spacing:0.15em}
+.feat h4{font-family:'Instrument Serif',serif;font-size:28px;font-weight:400;margin-top:auto;letter-spacing:-0.01em}
+.feat p{font-size:14px;color:var(--ink-dim);line-height:1.55;margin-top:10px;max-width:380px}
+
+.vis-ring{position:absolute;top:24px;right:24px;width:84px;height:84px;border-radius:50%;
+  background:conic-gradient(from -90deg, var(--accent) 0deg 240deg, rgba(139,92,246,0.12) 240deg 360deg)}
+.vis-ring::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--bg-2)}
+.vis-ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:14px;color:var(--accent);font-weight:500;z-index:1}
+
+.vis-graph{display:flex;align-items:flex-end;gap:2px;height:60px;margin-bottom:24px}
+.vis-graph i{display:block;width:6px;border-radius:1px}
+
+.vis-chips{display:flex;gap:8px;margin-bottom:24px}
+.vis-chip{padding:6px 14px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:12px}
+.vis-chip.h{background:rgba(182,156,255,0.14);color:var(--chip-h)}
+.vis-chip.m{background:rgba(126,224,255,0.14);color:var(--chip-m)}
+
+.vis-window{height:32px;border-radius:6px;background:linear-gradient(90deg,var(--accent) 0%, var(--accent) 18%, rgba(139,92,246,0.12) 18%, rgba(139,92,246,0.12) 40%, var(--amber) 40%, var(--amber) 46%, rgba(232,181,71,0.12) 46%, rgba(232,181,71,0.12) 70%, var(--rose) 70%, var(--rose) 78%, rgba(255,138,122,0.12) 78%);margin-bottom:20px;position:relative}
+.vis-window::after{content:"";position:absolute;left:18%;top:-4px;bottom:-4px;width:2px;background:var(--ink)}
+
+.vis-con{display:flex;align-items:center;gap:10px;margin-bottom:24px;font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim)}
+.vis-con .d{width:28px;height:28px;border-radius:7px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.vis-con .flow{flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--accent) 0 6px,transparent 6px 10px);position:relative}
+
+.vis-seal{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid rgba(139,92,246,0.3);color:var(--accent);font-family:'Geist Mono',monospace;font-size:11px;margin-bottom:16px}
+
+/* PREVIEW */
+.preview{padding:120px 0 80px}
+.preview h3{font-family:'Instrument Serif',serif;font-size:clamp(40px,6vw,80px);line-height:0.98;max-width:800px;margin-bottom:16px}
+.preview h3 em{font-style:italic;color:var(--accent)}
+.preview-note{font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-dim);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:60px}
+.preview-img{max-width:360px;margin:0 auto;border-radius:50%;overflow:hidden;box-shadow:0 0 120px -20px rgba(139,92,246,0.4)}
+.preview-img img{width:100%;height:auto;border-radius:50%}
+
+/* SETUP */
+.setup{padding:120px 0}
+.setup-head{max-width:760px;margin-bottom:60px}
+.setup-head h3{font-family:'Instrument Serif',serif;font-size:clamp(40px,5vw,64px);line-height:1;margin-bottom:20px}
+.setup-head p{font-size:17px;color:var(--ink-dim)}
+.setup-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+@media (max-width:880px){.setup-grid{grid-template-columns:repeat(2,1fr)}}
+.step{border-top:1px solid var(--ink);padding-top:20px}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:'Instrument Serif',serif;font-style:italic;font-size:72px;line-height:1;color:var(--accent);display:block;margin-bottom:40px}
+.step h5{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;margin-bottom:10px}
+.step p{font-size:14px;color:var(--ink-dim);line-height:1.55}
+.step a{color:var(--accent);border-bottom:1px solid rgba(139,92,246,0.3)}
+
+/* FAQ */
+.faq{padding:80px 0 140px}
+.faq-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px}
+@media (max-width:880px){.faq-grid{grid-template-columns:1fr;gap:32px}}
+.faq h3{font-family:'Instrument Serif',serif;font-size:clamp(40px,5vw,64px);line-height:1}
+.faq h3 em{font-style:italic;color:var(--accent)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line);padding:24px 0;cursor:pointer}
+.faq-item summary{display:flex;justify-content:space-between;align-items:center;font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;list-style:none;gap:20px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:'Geist Mono',monospace;font-size:20px;color:var(--accent);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary::after{content:"−"}
+.faq-item p{margin-top:14px;color:var(--ink-dim);font-size:15px;line-height:1.6;max-width:620px}
+
+/* CTA */
+.cta{padding:100px 0;border-top:1px solid var(--line);text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 60%);
+  pointer-events:none}
+.cta h3{font-family:'Instrument Serif',serif;font-size:clamp(56px,8vw,112px);line-height:0.95;position:relative}
+.cta h3 em{font-style:italic;color:var(--accent)}
+.cta p{margin-top:20px;color:var(--ink-dim);font-size:17px;position:relative}
+.cta .btn-primary{margin-top:36px;position:relative;padding:18px 32px;font-size:15px}
+.cta .timeline{margin-top:28px;font-family:'Geist Mono',monospace;font-size:12px;color:var(--ink-dim)}
+.cta .timeline a{color:var(--accent);border-bottom:1px solid rgba(139,92,246,0.3)}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--line);padding:60px 0 40px;font-size:13px;color:var(--ink-dim)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px}
+@media (max-width:780px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+.footer-grid h6{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);margin-bottom:16px;font-weight:500}
+.footer-grid a{display:block;padding:4px 0;color:var(--ink-dim)}
+.footer-grid a:hover{color:var(--ink)}
+.footer-brand{font-family:'Instrument Serif',serif;font-size:28px;color:var(--ink);margin-bottom:12px}
+.footer-brand em{font-style:italic;color:var(--accent)}
+.legal{font-size:11px;line-height:1.6;color:var(--ink-dim);padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-family:'Geist Mono',monospace}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Current <em style="font-style:italic;color:var(--accent)">Spot</em></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#why">Why</a>
+      <a href="index.html#getting-started">Wear OS Setup</a>
+      <a href="ios.html" aria-current="page">iOS</a>
+    </nav>
+    <div class="top-actions">
+      <div class="lang" aria-label="Language switcher">
+        <span class="on">EN</span> · <a href="ios.de.html" hreflang="de">DE</a>
+      </div>
+      <a class="notify-btn" href="#notify">Notify me</a>
+    </div>
+  </div>
+</header>
+
+<!-- LIVE TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="dot accent"></span>SPOT <b>30.9 ct/kWh</b></span>
+    <span class="ticker-item"><span class="dot amber"></span>TOMORROW·LOW <b>18.2 ct</b> · 03:00</span>
+    <span class="ticker-item"><span class="dot rose"></span>TOMORROW·PEAK <b>42.7 ct</b> · 19:00</span>
+    <span class="ticker-item"><span class="dot accent"></span>LIVE POWER <b>164 W</b></span>
+    <span class="ticker-item"><span class="dot accent"></span>CHEAPEST WINDOW <b>00:45</b> · in 3h 24m</span>
+    <span class="ticker-item"><span class="dot amber"></span>TODAY <b>9.2 kWh</b> · 2.61 €</span>
+    <span class="ticker-item"><span class="dot rose"></span>TREND vs LAST WEEK <b>+3%</b></span>
+    <span class="ticker-item"><span class="dot accent"></span>SPOT <b>30.9 ct/kWh</b></span>
+    <span class="ticker-item"><span class="dot amber"></span>TOMORROW·LOW <b>18.2 ct</b> · 03:00</span>
+    <span class="ticker-item"><span class="dot rose"></span>TOMORROW·PEAK <b>42.7 ct</b> · 19:00</span>
+    <span class="ticker-item"><span class="dot accent"></span>LIVE POWER <b>164 W</b></span>
+    <span class="ticker-item"><span class="dot accent"></span>CHEAPEST WINDOW <b>00:45</b> · in 3h 24m</span>
+    <span class="ticker-item"><span class="dot amber"></span>TODAY <b>9.2 kWh</b> · 2.61 €</span>
+    <span class="ticker-item"><span class="dot rose"></span>TREND vs LAST WEEK <b>+3%</b></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="cs-badge"><span class="dot"></span>Coming soon · Apple Watch &amp; iPhone</div>
+      <h1 class="display hero-title">
+        A power-price<br>
+        dashboard,<br>
+        <em>worn on the wrist.</em>
+      </h1>
+      <p class="hero-sub">
+        <b>Current Spot</b> reads spot prices and live power straight from your Tibber home and renders them on Apple Watch — in complications, in widgets, and on your iPhone Lock Screen.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#notify">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 4v10h16V8l-8 5-8-5z" fill="currentColor"/></svg>
+          Notify me at launch
+        </a>
+        <a class="btn-ghost" href="index.html">Get the Wear OS version →</a>
+      </div>
+      <div class="hero-meta">
+        <span><span class="dot accent"></span> watchOS 10+ · iOS 17+</span>
+        <span><span class="dot amber"></span> In development</span>
+        <span><span class="dot accent"></span> Free · No tracking</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg class="ring" viewBox="0 0 400 400">
+        <defs>
+          <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#A78BFA"/>
+            <stop offset="50%" stop-color="#8B5CF6"/>
+            <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(139,92,246,0.08)" stroke-width="32"/>
+        <circle cx="200" cy="200" r="180" fill="none" stroke="url(#ringGrad)" stroke-width="32" stroke-linecap="round" stroke-dasharray="720 1131" transform="rotate(-90 200 200)"/>
+      </svg>
+      <div class="face">
+        <div class="unit">30.9 CT · KWH</div>
+        <div class="big">10:47</div>
+        <div class="sub">CHEAPEST · 00:45 · IN 3H 24M</div>
+      </div>
+      <div class="hero-labels">
+        <div class="chip live"><span class="dot accent"></span> LIVE · 164 W</div>
+        <div class="chip cheap"><span class="dot amber"></span> BEST · 00:45</div>
+        <div class="chip trend"><span class="dot rose"></span> TREND +3%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="graph-strip">
+      <div class="label">
+        <h4>Tibber spot price · last 24h → next 24h</h4>
+        <div class="legend">
+          <span><span class="dot accent"></span> low</span>
+          <span><span class="dot amber"></span> normal</span>
+          <span><span class="dot rose"></span> high</span>
+        </div>
+      </div>
+      <div class="bars" id="bars"></div>
+      <div class="hour-axis"><span>−24h</span><span>−18</span><span>−12</span><span>−6</span><span>now</span><span>+6</span><span>+12</span><span>+18</span><span>+24h</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PITCH -->
+<section class="pitch">
+  <div class="wrap pitch-grid">
+    <div class="eyebrow">01 — The idea</div>
+    <div>
+      <h2>The best moment to use electricity is <em>not always now.</em> Your wrist is the best place to find out.</h2>
+      <p class="lead" style="margin-top:32px">Tibber tells you the spot price is dropping at 23:00. By the time you remember to start the washing machine, you've already missed the dip.</p>
+      <p>Current Spot puts the whole 48-hour forecast — along with your real-time draw from a Tibber Pulse — into complication families, a Lock Screen widget, and a Home Screen widget. Already on Wear OS today. Coming to Apple Watch next.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <div class="wrap">
+    <div class="features-head">
+      <h3>Six things it will do. None of them loud.</h3>
+      <span>Planned feature set</span>
+    </div>
+    <div class="feat-grid">
+
+      <div class="feat wide">
+        <div>
+          <div class="num">01 · NATIVE APPLE WATCH APP</div>
+          <div class="vis-ring"><b>30.9</b></div>
+        </div>
+        <div>
+          <h4>Built with SwiftUI — crown scrolling, rounded layouts, watch-native graphs.</h4>
+          <p>Switches between 60-min and 15-min price resolution — whichever your country's market publishes.</p>
+        </div>
+      </div>
+
+      <div class="feat tall">
+        <div>
+          <div class="num">02 · 48-HOUR PRICE GRAPH</div>
+          <div class="vis-graph" id="vis-graph"></div>
+        </div>
+        <div>
+          <h4>Today and tomorrow, at a scrub.</h4>
+          <p>Digital Crown native. Scroll along the curve to read the exact cent/kWh at any hour — past, present, or forecast.</p>
+        </div>
+      </div>
+
+      <div class="feat small">
+        <div class="vis-chips">
+          <span class="vis-chip h">Corner</span>
+          <span class="vis-chip m">Circular</span>
+        </div>
+        <div>
+          <div class="num">03 · COMPLICATIONS</div>
+          <h4 style="font-size:22px">Every slot<br>on every face.</h4>
+        </div>
+      </div>
+
+      <div class="feat small">
+        <div>
+          <div class="vis-window"></div>
+        </div>
+        <div>
+          <div class="num">04 · CHEAPEST WINDOW</div>
+          <h4 style="font-size:22px">Auto-detects<br>the dip.</h4>
+        </div>
+      </div>
+
+      <div class="feat small">
+        <div class="vis-con">
+          <span class="d">📱</span>
+          <span class="flow"></span>
+          <span class="d">⌚</span>
+        </div>
+        <div>
+          <div class="num">05 · TIBBER PULSE LIVE POWER</div>
+          <h4 style="font-size:22px">iPhone relay<br>or solo over LTE.</h4>
+        </div>
+      </div>
+
+      <div class="feat wide">
+        <div>
+          <div class="vis-seal">◉ ZERO-TRACKING CERTIFIED</div>
+        </div>
+        <div>
+          <div class="num">06 · PRIVATE BY CONSTRUCTION</div>
+          <h4>No analytics. No ad SDK. Your token goes from device to Tibber, and nowhere else.</h4>
+          <p>Same principle as the Wear OS version. No proxy, no backend of ours in the middle, no account required beyond your Tibber token.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PREVIEW -->
+<section class="preview">
+  <div class="wrap" style="text-align:center">
+    <h3>Designed for <em>Apple Watch,</em> first.</h3>
+    <p class="preview-note" style="margin-top:12px">App icon preview · Screenshots coming with TestFlight beta</p>
+    <div class="preview-img">
+      <img src="assets/ios-hero.png" alt="Current Spot app icon — C mark with lightning bolt" width="360" height="360">
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="setup" class="setup">
+  <div class="wrap">
+    <div class="setup-head">
+      <div class="eyebrow">Planned onboarding</div>
+      <h3 style="margin-top:20px">From zero to live data<br>in about four minutes.</h3>
+      <p>This is how setup will work when the app launches. You will need a Tibber account with API access enabled.</p>
+    </div>
+    <div class="setup-grid">
+      <div class="step">
+        <h5>Install the app</h5>
+        <p>One App Store listing installs both the iPhone app and the Apple Watch app automatically once your watch is paired.</p>
+      </div>
+      <div class="step">
+        <h5>Generate a token</h5>
+        <p>At <a href="https://developer.tibber.com" target="_blank" rel="noopener">developer.tibber.com</a>. Enable the <em>home</em> and <em>real-time</em> scopes if you want live Pulse data.</p>
+      </div>
+      <div class="step">
+        <h5>Paste &amp; validate</h5>
+        <p>Paste the token on iPhone. It hits Tibber's API in under a second, shows your homes, and syncs the pick to Watch automatically.</p>
+      </div>
+      <div class="step">
+        <h5>Pin a complication</h5>
+        <p>Edit any watch face, tap an empty slot, and pick Current Spot — corner, circular, or rectangular.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div>
+        <div class="eyebrow">Questions</div>
+        <h3 style="margin-top:20px">The ones we hear <em>most often.</em></h3>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Is this an official Tibber app?</summary>
+          <p>No. Current Spot is an independent, community-built companion. It talks to Tibber's public GraphQL API with your personal token and is not affiliated with, endorsed by, or officially connected with Tibber AS.</p>
+        </details>
+        <details class="faq-item">
+          <summary>When will the iOS version launch?</summary>
+          <p>In development. Pricing and exact release date will be announced here and via the launch-notification email list. The Wear OS version (Galaxy Watch, Pixel Watch) is <a href="index.html" style="color:var(--accent)">available today</a>.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which Apple Watches will be supported?</summary>
+          <p>Target is watchOS 10 or later — Apple Watch Series 6, 7, 8, 9, 10, SE (2nd gen) and Ultra / Ultra 2. Earlier Series devices may be supported depending on framework availability.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which complication families are supported?</summary>
+          <p>Planned: corner, circular and rectangular complications for every Apple Watch face — current spot price and live power at a glance. Exact families confirmed at launch.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does the Watch need my iPhone nearby?</summary>
+          <p>For live Pulse power data, yes — the iPhone companion runs a Bluetooth relay from your Tibber Pulse to the watch. For spot prices and graphs, an LTE or Wi-Fi Apple Watch can fetch directly from api.tibber.com.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a public TestFlight yet?</summary>
+          <p>Not yet — the link will appear on this page as soon as the first beta ships. Email sign-ups get first access.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does this compare to Tobbe?</summary>
+          <p>Tobbe is iOS-only and currently English/Swedish. Current Spot is multi-platform (Wear OS today, Apple Watch next) and localised in English, German, Dutch, Swedish and Norwegian.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What data do you collect?</summary>
+          <p>None. No analytics, no tracking, no servers of ours. Your Tibber access token lives in iOS Keychain and never leaves your device.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="notify" class="cta">
+  <div class="wrap">
+    <h3>Glance. <em>Decide.</em><br>Run the dishwasher.</h3>
+    <p>Send a quick email and we'll notify you the day the Apple Watch and iPhone versions hit the App Store.</p>
+    <a class="btn-primary" href="mailto:ivankablar25@gmail.com?subject=Notify%20me%20about%20Current%20Spot%20for%20iOS&amp;body=Please%20notify%20me%20when%20Current%20Spot%20for%20iPhone%20and%20Apple%20Watch%20launches.">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 4v10h16V8l-8 5-8-5z" fill="currentColor"/></svg>
+      Email me at launch
+    </a>
+    <p class="timeline"><strong style="color:var(--ink)">Status:</strong> in development. Public TestFlight beta: <em>TBA</em>. Wear OS is <a href="index.html">available today</a>.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Current <em>Spot</em></div>
+        <p style="max-width:320px;line-height:1.6">An unofficial Apple Watch companion for Tibber customers. Native Swift, WidgetKit — private by construction. Coming soon.</p>
+      </div>
+      <div>
+        <h6>App</h6>
+        <a href="#notify">Notify me</a>
+        <a href="#features">Features</a>
+        <a href="#setup">Setup</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h6>Platforms</h6>
+        <a href="index.html">Wear OS →</a>
+        <a href="ios.html" aria-current="page">Apple Watch</a>
+      </div>
+      <div>
+        <h6>Source</h6>
+        <a href="https://github.com/IvanKablar/current_spot_support" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/IvanKablar/current_spot_support/issues" target="_blank" rel="noopener">Report a bug</a>
+      </div>
+      <div>
+        <h6>Legal</h6>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="imprint.html">Imprint</a>
+        <a href="ios.de.html" hreflang="de">Deutsch</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Ivan Kablar · Made for the Tibber community</span>
+      <span>Not affiliated with Tibber AS or Apple Inc. · Tibber® is a registered trademark</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const bars = document.getElementById('bars');
+  if(!bars) return;
+  const N = 96;
+  const data = [];
+  for(let i=0;i<N;i++){
+    const t = i/N * Math.PI*2*2;
+    const base = 28 + Math.sin(t*1.0)*14 + Math.cos(t*2.3)*6 + Math.sin(t*0.4+1.2)*4;
+    data.push(Math.max(8, Math.min(50, base)));
+  }
+  const max = 54, min = 14;
+  data.forEach((v,i)=>{
+    const h = ((v-min)/(max-min))*100;
+    const cls = v < 24 ? 'lo' : v < 36 ? 'mid' : 'hi';
+    const b = document.createElement('div');
+    b.className = 'bar '+cls;
+    b.style.height = h+'%';
+    b.style.opacity = i < N/2 ? (0.35 + i/(N)*0.65) : 1;
+    bars.appendChild(b);
+  });
+})();
+
+(function(){
+  const g = document.getElementById('vis-graph');
+  if(!g) return;
+  const data=[22,25,28,24,20,18,16,19,24,30,34,38,36,32,28,26,24,22,26,32,40,42,38,30];
+  const max=44,min=14;
+  data.forEach(v=>{
+    const h = ((v-min)/(max-min))*100;
+    const i = document.createElement('i');
+    i.style.height = h+'%';
+    i.style.background = v < 22 ? 'var(--accent)' : v < 34 ? 'var(--amber)' : 'var(--rose)';
+    g.appendChild(i);
+  });
+})();
+</script>
+
+</body>
+</html>

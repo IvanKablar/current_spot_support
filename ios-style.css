@@ -1,0 +1,405 @@
+/* iOS / Apple-style overrides — scoped under .ios-page on <body> */
+
+.ios-page {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
+    background: #000;
+    color: #f5f5f7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+.ios-page .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Frosted-glass nav, Apple-like */
+.ios-page .site-nav {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.ios-page .nav-container {
+    height: 48px;
+    padding: 0 22px;
+}
+.ios-page .nav-logo {
+    font-size: 17px;
+    font-weight: 600;
+    color: #f5f5f7;
+    text-decoration: none;
+}
+.ios-page .nav-links a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #f5f5f7;
+    opacity: 0.88;
+    padding: 0 12px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.ios-page .nav-links a:hover,
+.ios-page .nav-links a[aria-current="page"] {
+    opacity: 1;
+}
+.ios-page .lang-switch a {
+    color: #f5f5f7;
+    opacity: 0.7;
+    font-size: 12px;
+    text-decoration: none;
+}
+.ios-page .lang-switch a.active,
+.ios-page .lang-switch a[aria-current="page"] {
+    opacity: 1;
+}
+
+/* Hero */
+.ios-page .hero {
+    padding: 120px 0 80px;
+    text-align: center;
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(139, 92, 246, 0.22), transparent 70%);
+    position: relative;
+    overflow: hidden;
+}
+.ios-page .hero::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 800px;
+    height: 800px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+.ios-page .hero > .container {
+    position: relative;
+    z-index: 1;
+}
+.ios-page .hero-title {
+    font-size: clamp(42px, 7vw, 80px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    margin: 24px 0 24px;
+    color: #f5f5f7;
+}
+.ios-page .gradient-text {
+    background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.ios-page .hero-subtitle {
+    font-size: clamp(17px, 2vw, 22px);
+    line-height: 1.45;
+    color: rgba(235, 235, 245, 0.65);
+    max-width: 640px;
+    margin: 0 auto 40px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+.ios-page .hero-cta {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+.ios-page .disclaimer {
+    margin-top: 56px;
+    color: rgba(235, 235, 245, 0.4);
+    font-size: 12px;
+}
+
+/* Coming-soon pill */
+.ios-page .coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 980px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0;
+    box-shadow: 0 2px 12px rgba(139, 92, 246, 0.35);
+}
+.ios-page .coming-soon-badge svg {
+    animation: ios-pulse 1.8s ease-in-out infinite;
+}
+@keyframes ios-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Buttons — Apple pill */
+.ios-page .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 980px;
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: -0.01em;
+}
+.ios-page .btn-primary {
+    background: linear-gradient(180deg, #a78bfa 0%, #8B5CF6 100%);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+.ios-page .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(139, 92, 246, 0.5);
+}
+.ios-page .btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f5f5f7;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+}
+.ios-page .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+.ios-page .btn-compact {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.ios-page .btn-large {
+    padding: 16px 34px;
+    font-size: 19px;
+}
+
+/* Hero image — app icon */
+.ios-page .ios-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 56px auto 16px;
+    max-width: 360px;
+    position: relative;
+}
+.ios-page .ios-hero-image::before {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background: radial-gradient(circle, rgba(30, 208, 231, 0.25), transparent 65%);
+    filter: blur(30px);
+    z-index: -1;
+    pointer-events: none;
+}
+.ios-page .ios-hero-image img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    border-radius: 72px;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 8px 24px rgba(30, 208, 231, 0.15);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.ios-page .ios-hero-image img:hover {
+    transform: scale(1.03) translateY(-4px);
+}
+@media (max-width: 640px) {
+    .ios-page .ios-hero-image img {
+        max-width: 240px;
+        border-radius: 54px;
+    }
+}
+
+/* Sections */
+.ios-page .features,
+.ios-page .faq {
+    padding: 100px 0;
+}
+.ios-page .features {
+    background: linear-gradient(180deg, #000 0%, #0a0a0d 100%);
+}
+.ios-page .section-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-align: center;
+    margin: 0 0 56px;
+    line-height: 1.08;
+    color: #f5f5f7;
+}
+
+/* Feature cards */
+.ios-page .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+}
+.ios-page .feature-card {
+    background: linear-gradient(180deg, #1c1c1e 0%, #141416 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    padding: 32px 28px;
+    transition: all 0.3s ease;
+}
+.ios-page .feature-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.ios-page .feature-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+    line-height: 1;
+}
+.ios-page .feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    color: #f5f5f7;
+}
+.ios-page .feature-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(235, 235, 245, 0.6);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* CTA */
+.ios-page .cta {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(180deg, #0a0a0d 0%, #000 100%);
+    position: relative;
+}
+.ios-page .cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(139, 92, 246, 0.1), transparent 70%);
+    pointer-events: none;
+}
+.ios-page .cta > .container { position: relative; }
+.ios-page .cta h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0 0 16px;
+    line-height: 1.08;
+    color: #f5f5f7;
+}
+.ios-page .cta p {
+    font-size: 19px;
+    color: rgba(235, 235, 245, 0.65);
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.45;
+}
+.ios-page .timeline-note {
+    background: rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin: 40px auto 0;
+    max-width: 640px;
+    font-size: 15px;
+    color: rgba(235, 235, 245, 0.7);
+    line-height: 1.5;
+}
+.ios-page .timeline-note strong { color: #f5f5f7; }
+.ios-page .timeline-note a { color: #a78bfa; text-decoration: none; }
+.ios-page .timeline-note a:hover { text-decoration: underline; }
+
+/* FAQ */
+.ios-page .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+}
+.ios-page .faq-item {
+    background: linear-gradient(180deg, #1c1c1e 0%, #141416 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    padding: 28px;
+}
+.ios-page .faq-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    color: #f5f5f7;
+}
+.ios-page .faq-item p {
+    font-size: 15px;
+    line-height: 1.53;
+    color: rgba(235, 235, 245, 0.65);
+    margin: 0;
+}
+.ios-page .faq-item a { color: #a78bfa; text-decoration: none; }
+.ios-page .faq-item a:hover { text-decoration: underline; }
+
+/* Footer — dark, Apple-like */
+.ios-page .footer {
+    background: #1c1c1e;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 48px 0 32px;
+    font-size: 12px;
+    color: rgba(235, 235, 245, 0.55);
+}
+.ios-page .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+.ios-page .footer-section h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #f5f5f7;
+    margin: 0 0 14px;
+    letter-spacing: 0;
+}
+.ios-page .footer-section p,
+.ios-page .footer-section li {
+    font-size: 12px;
+    line-height: 1.6;
+    color: rgba(235, 235, 245, 0.55);
+}
+.ios-page .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ios-page .footer-section a {
+    color: rgba(235, 235, 245, 0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.ios-page .footer-section a:hover { color: #f5f5f7; }
+.ios-page .footer-disclaimer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 24px;
+    font-size: 11px;
+    line-height: 1.55;
+    color: rgba(235, 235, 245, 0.4);
+}
+.ios-page .footer-disclaimer p { margin: 0 0 8px; }
+
+@media (max-width: 640px) {
+    .ios-page .hero { padding: 88px 0 56px; }
+    .ios-page .features, .ios-page .faq, .ios-page .cta { padding: 64px 0; }
+    .ios-page .hero-cta { flex-direction: column; align-items: stretch; }
+    .ios-page .btn { justify-content: center; }
+}
