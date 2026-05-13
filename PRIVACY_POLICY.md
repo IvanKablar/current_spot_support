@@ -1,7 +1,7 @@
 # Privacy Policy
 
-**Current Spot - WearOS App**
-Last updated: February 22, 2026
+**Current Spot - Wear OS, watchOS & iOS App**
+Last updated: 13 May 2026
 
 ## 1. Data Collection and Storage
 
@@ -11,6 +11,7 @@ This app collects and stores the following data locally on your devices:
 - **Home ID**: Your Tibber Home identifier for retrieving electricity prices
 - **Electricity Price Data**: Current and forecasted electricity prices from Tibber API
 - **App Preferences**: Your selected settings (e.g., price interval: hourly/15-minute)
+- **CarPlay Home Location (iOS, optional, opt-in)**: If you enable CarPlay home detection, the GPS coordinates and radius of your home are stored locally in iOS system settings. This feature is off by default. See section 2 ("CarPlay & Location") for details.
 
 **All data is stored exclusively on your devices.** No data is transmitted to third-party servers except as described below.
 
@@ -28,6 +29,17 @@ This app collects and stores the following data locally on your devices:
 - WearOS Data Layer: Used to synchronize your access token and settings between phone and watch
 - No analytics or tracking services are used
 - No user data is shared with Google beyond what's required for app functionality
+
+### CarPlay & Location (iOS, optional)
+The optional CarPlay features process additional data **exclusively locally on your iPhone**. No location or address data is transmitted to the developer, to Tibber, or to third parties.
+
+- **CarPlay in-car display**: When the iPhone is connected to CarPlay, the app shows electricity prices and cheapest charging blocks from the local Tibber cache. No additional network requests are made.
+- **Home geofence (opt-in, off by default)**: If you enable the "cheap charging window at home arrival" notification, the app processes the GPS coordinates and radius of your home (manually entered or derived from your Tibber address via reverse geocoding). Stored exclusively locally in iOS system settings (`UserDefaults`). iOS monitors the home region via the Region Monitoring API (`CLCircularRegion`) — the app only receives a "region entered" event and does not know your location outside the home region.
+- **"Always" location permission**: iOS requires this permission level for region monitoring to work in the background. The app uses it exclusively for this purpose — no continuous tracking.
+- **Reverse geocoding**: Address text is passed to Apple's `CLGeocoder`. Apple processes the request per [Apple's Privacy Policy](https://www.apple.com/legal/privacy/). Coordinates are stored only locally.
+- **Push notifications**: Generated locally by the iOS device. No APNs token is transmitted, no server-side push infrastructure is used.
+- **Deleting data**: App Settings → CarPlay → "Delete home" removes all stored location data and stops region monitoring. Uninstalling permanently deletes everything.
+- **Legal basis**: Art. 6 (1) (a) GDPR (consent) or Art. 6 (1) (b) GDPR (performance of activated function).
 
 ## 3. Data Usage
 

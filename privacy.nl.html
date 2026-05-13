@@ -47,7 +47,7 @@
     <main class="legal">
         <div class="container">
             <h1>Privacybeleid</h1>
-            <p class="legal-lead">Current Spot – Wear OS-app. Laatst bijgewerkt: 16 april 2026.</p>
+            <p class="legal-lead">Current Spot – Wear OS-, watchOS- en iOS-app. Laatst bijgewerkt: 13 mei 2026.</p>
 
             <h2>1. Verantwoordelijke voor de gegevensverwerking</h2>
             <p>Verantwoordelijke in de zin van de Algemene Verordening Gegevensbescherming (AVG) en andere nationale wetten inzake gegevensbescherming:</p>
@@ -60,6 +60,7 @@
                 <li><strong>Home-ID</strong>: De identifier van uw Tibber Home die wordt gebruikt om elektriciteitsprijzen op te halen.</li>
                 <li><strong>Elektriciteitsprijsgegevens</strong>: Actuele en voorspelde prijzen ontvangen van de Tibber API.</li>
                 <li><strong>App-instellingen</strong>: Uw geselecteerde instellingen, bijv. prijsinterval (per uur / 15 minuten).</li>
+                <li><strong>CarPlay thuislocatie (iOS, optioneel, opt-in)</strong>: Als u in de app-instellingen de thuisdetectie voor CarPlay activeert, worden de GPS-coördinaten en de straal van uw thuis lokaal in de iOS-systeeminstellingen opgeslagen. Standaard is deze functie uit. Zie sectie 3.4 voor details.</li>
             </ul>
             <p>Alle gegevens worden uitsluitend op uw apparaten opgeslagen. Er worden geen persoonsgegevens naar de app-ontwikkelaar verzonden. Er worden geen analyse- of tracking-diensten gebruikt.</p>
 
@@ -77,6 +78,18 @@
             <p>De Data Layer wordt gebruikt om uw toegangstoken en instellingen te synchroniseren tussen telefoon en horloge via een lokaal kanaal van Google Play Services. Er worden geen gebruikersgegevens met Google gedeeld die verder gaan dan wat nodig is voor de werking van de app.</p>
             <h3>3.3 Google Play Billing</h3>
             <p>Als u kiest voor een vrijwillige donatie, wordt de betaling verwerkt door Google Play Billing. Current Spot ziet uw betalingsgegevens nooit; de ontwikkelaar ontvangt alleen een anonieme bevestiging dat er een aankoop heeft plaatsgevonden. Privacy-informatie: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+            <h3>3.4 CarPlay &amp; Locatie (iOS, optioneel)</h3>
+            <p>De optionele CarPlay-functies verwerken aanvullende gegevens <strong>uitsluitend lokaal op uw iPhone</strong>. Er worden geen locatie- of adresgegevens doorgegeven aan de ontwikkelaar, aan Tibber of aan derden.</p>
+            <ul>
+                <li><strong>CarPlay-weergave in de auto:</strong> Wanneer uw iPhone is verbonden met CarPlay, toont de app op het autodisplay elektriciteitsprijzen en goedkoopste laad-blokken uit de lokale Tibber-cache. Er worden <em>geen extra netwerkverzoeken</em> gedaan voor de CarPlay-weergave.</li>
+                <li><strong>Thuis-geofence (opt-in, standaard uit):</strong> Als u in de app-instellingen de melding „goedkoop laad-venster bij thuiskomst" activeert, verwerkt de app de GPS-coördinaten en de straal van uw thuis (handmatig door u ingevoerd of via reverse geocoding afgeleid uit uw Tibber-adres). Deze gegevens worden <strong>uitsluitend lokaal opgeslagen in de iOS-systeeminstellingen (<code>UserDefaults</code>)</strong> en verlaten uw apparaat nooit. iOS bewaakt de thuisregio via de Region Monitoring API (<code>CLCircularRegion</code>) — de app ontvangt alleen een gebeurtenis van het type „regio betreden" en kent uw locatie buiten de thuisregio niet.</li>
+                <li><strong>„Altijd"-locatietoestemming:</strong> iOS vereist deze toestemmingsniveau zodat de regio-bewaking op de achtergrond (app gesloten) functioneert. De app gebruikt deze uitsluitend hiervoor — er vindt geen continue locatie-tracking plaats.</li>
+                <li><strong>Reverse geocoding van het adres:</strong> Als u uw adres als tekst invoert, geeft de app dit door aan Apple's <code>CLGeocoder</code>. Apple verwerkt het verzoek conform het <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacybeleid</a>. Het resultaat (coördinaten) wordt uitsluitend lokaal opgeslagen.</li>
+                <li><strong>Push-meldingen:</strong> Worden lokaal door het iOS-apparaat gegenereerd. Er wordt geen APNs-token naar een server verzonden, geen server-zijdige push-infrastructuur gebruikt.</li>
+                <li><strong>Gegevens verwijderen:</strong> Via App-instellingen → CarPlay → „Thuis verwijderen" worden direct alle opgeslagen locatiegegevens verwijderd en de regio-bewaking gestopt. Bij het verwijderen van de app worden alle gegevens permanent verwijderd.</li>
+                <li><strong>Wettelijke grondslag:</strong> Art. 6 lid 1 onder a AVG (toestemming — opt-in in app-instelling) of Art. 6 lid 1 onder b AVG (uitvoering van de door u geactiveerde functie).</li>
+            </ul>
 
             <h2>4. Website-hosting</h2>
             <p>Deze website wordt gehost op <strong>Cloudflare Pages</strong> (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, VS). Wanneer u de site bezoekt, verwerkt Cloudflare automatisch technische informatie (bijv. IP-adres, browser, tijdstempel) ten behoeve van het leveren van de site en het voorkomen van misbruik. Rechtsgrondslag: Art. 6 (1) (f) AVG (gerechtvaardigd belang bij veilige werking). Internationale doorgifte wordt gedekt door het EU-VS Data Privacy Framework. Privacybeleid van Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>

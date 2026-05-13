@@ -55,7 +55,7 @@
     <main class="legal">
         <div class="container">
             <h1>Datenschutzerklärung</h1>
-            <p class="legal-lead">Current Spot – Wear OS App. Stand: 16. April 2026.</p>
+            <p class="legal-lead">Current Spot – Wear OS, watchOS und iOS App. Stand: 13. Mai 2026.</p>
 
             <h2>1. Verantwortlicher</h2>
             <p>Verantwortlicher im Sinne der DSGVO und anderer nationaler Datenschutzgesetze ist:</p>
@@ -74,6 +74,7 @@
                 <li><strong>Home-ID</strong>: Die Kennung deines Tibber-Zuhauses zum Abruf der Strompreise.</li>
                 <li><strong>Strompreis-Daten</strong>: Aktuelle und prognostizierte Preise aus der Tibber-API.</li>
                 <li><strong>App-Einstellungen</strong>: Deine Auswahl (z.B. Preisintervall stündlich oder 15-Minuten).</li>
+                <li><strong>CarPlay-Heim-Standort (iOS, optional, Opt-in)</strong>: Falls du in den App-Einstellungen die Heim-Erkennung für CarPlay aktivierst, werden die GPS-Koordinaten und der Radius deines Zuhauses lokal in den iOS-System-Settings gespeichert. Standardmäßig ist diese Funktion aus. Details siehe Ziffer 3.4.</li>
             </ul>
             <p>Alle Daten werden ausschließlich auf deinen Geräten gespeichert. An den App-Entwickler werden keine personenbezogenen Daten übermittelt. Es werden keine Analyse- oder Tracking-Dienste eingesetzt.</p>
 
@@ -91,6 +92,18 @@
             <p>Der Data Layer wird genutzt, um deinen Zugriffstoken und deine Einstellungen zwischen Smartphone und Uhr über einen von Google Play Services bereitgestellten lokalen Kanal zu synchronisieren. Über das für die App-Funktionalität Erforderliche hinaus werden keine Nutzerdaten mit Google geteilt.</p>
             <h3>3.3 Google Play Billing</h3>
             <p>Optionale Spenden werden über Google Play Billing abgewickelt. Current Spot erhält keinerlei Zahlungsdaten – der Entwickler bekommt ausschließlich eine anonyme Bestätigung, dass ein Kauf stattgefunden hat. Datenschutzhinweise: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+            <h3>3.4 CarPlay &amp; Standort (iOS, optional)</h3>
+            <p>Die optionalen CarPlay-Funktionen verarbeiten zusätzliche Daten <strong>ausschließlich lokal auf deinem iPhone</strong>. Es werden keine Standort- oder Adressdaten an den Entwickler, an Tibber oder an Dritte übertragen.</p>
+            <ul>
+                <li><strong>CarPlay-Anzeige im Auto:</strong> Wenn dein iPhone mit CarPlay verbunden ist, zeigt die App im Auto-Display Strompreise und günstige Lade-Blöcke aus dem lokalen Tibber-Cache. Es entstehen <em>keine zusätzlichen Netzwerk-Anfragen</em> für die CarPlay-Anzeige.</li>
+                <li><strong>Heim-Geofence (Opt-in, standardmäßig aus):</strong> Falls du in den App-Einstellungen die Benachrichtigung „günstiges Lade-Fenster bei Ankunft zuhause" aktivierst, verarbeitet die App die GPS-Koordinaten und den Radius deines Zuhauses (manuell von dir eingegeben oder per Reverse-Geocoding aus deiner Tibber-Adresse abgeleitet). Diese Daten werden <strong>ausschließlich lokal in den iOS-System-Settings (<code>UserDefaults</code>) gespeichert</strong> und verlassen dein Gerät nie. iOS überwacht die Heim-Region über die Region-Monitoring-API (<code>CLCircularRegion</code>) — die App empfängt nur ein Event vom Typ „Region betreten" und kennt deinen Standort außerhalb der Heim-Region nicht.</li>
+                <li><strong>„Always"-Standortberechtigung:</strong> iOS verlangt diese Berechtigungs-Stufe, damit das Region-Monitoring im Hintergrund (App geschlossen) funktioniert. Die App nutzt sie ausschließlich dafür — es findet keine kontinuierliche Standort-Verfolgung statt.</li>
+                <li><strong>Reverse-Geocoding der Adresse:</strong> Wenn du deine Adresse als Text eingibst, übergibt die App diese an Apples <code>CLGeocoder</code>. Apple verarbeitet die Anfrage gemäß der <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Datenschutzerklärung</a>. Das Ergebnis (Koordinaten) wird nur lokal gespeichert.</li>
+                <li><strong>Push-Notifications:</strong> Werden lokal vom iOS-Gerät erzeugt. Es wird kein APNs-Token an einen Server übertragen, keine Server-seitige Push-Infrastruktur eingesetzt.</li>
+                <li><strong>Daten löschen:</strong> In den App-Einstellungen → CarPlay → „Heim löschen" entfernt sofort alle gespeicherten Standort-Daten und stoppt das Region-Monitoring. Beim Deinstallieren der App werden alle Daten dauerhaft gelöscht.</li>
+                <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung — Opt-in im App-Setting) bzw. Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung der von dir aktivierten Funktion).</li>
+            </ul>
 
             <h2>4. Website-Hosting</h2>
             <p>Diese Website wird bei <strong>Cloudflare Pages</strong> gehostet (Anbieter: Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). Beim Aufruf der Website verarbeitet Cloudflare automatisch technische Informationen (z.B. IP-Adresse, Browser, Zeitstempel) zur Auslieferung der Seite und zur Missbrauchsabwehr. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb). Die Übermittlung in die USA erfolgt auf Grundlage des EU-U.S. Data Privacy Frameworks. Datenschutzerklärung von Cloudflare: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>

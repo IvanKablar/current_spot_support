@@ -55,7 +55,7 @@
     <main class="legal">
         <div class="container">
             <h1>Privacy Policy</h1>
-            <p class="legal-lead">Current Spot – Wear OS, watchOS and iOS app. Last updated: 9 May 2026.</p>
+            <p class="legal-lead">Current Spot – Wear OS, watchOS and iOS app. Last updated: 13 May 2026.</p>
 
             <h2>1. Data Controller</h2>
             <p>Controller in terms of the EU General Data Protection Regulation (GDPR) and other national data protection laws:</p>
@@ -74,6 +74,7 @@
                 <li><strong>Home ID</strong>: Your Tibber Home identifier used to retrieve electricity prices.</li>
                 <li><strong>Electricity Price Data</strong>: Current and forecasted prices received from the Tibber API.</li>
                 <li><strong>App Preferences</strong>: Your selected settings, e.g. price interval (hourly / 15-minute).</li>
+                <li><strong>CarPlay Home Location (iOS, optional, opt-in)</strong>: If you enable CarPlay home detection in the app settings, the GPS coordinates and radius of your home are stored locally in iOS system settings. This feature is off by default. See section 3.4 for details.</li>
             </ul>
             <p>All data is stored exclusively on your devices. No personal data is transmitted to the app developer. No analytics or tracking services are used.</p>
 
@@ -93,6 +94,18 @@
             <h3>3.3 In-App Purchases</h3>
             <p>On Wear OS, if you choose to make an optional donation, the payment is processed by Google Play Billing. Current Spot never sees your payment details; the developer only receives an anonymous confirmation that a purchase took place. Privacy information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
             <p>On iOS, no in-app purchases are offered at this time.</p>
+
+            <h3>3.4 CarPlay &amp; Location (iOS, optional)</h3>
+            <p>The optional CarPlay features process additional data <strong>exclusively locally on your iPhone</strong>. No location or address data is transmitted to the developer, to Tibber, or to third parties.</p>
+            <ul>
+                <li><strong>CarPlay in-car display:</strong> When your iPhone is connected to CarPlay, the app shows electricity prices and cheapest charging blocks on the car display, sourced from the local Tibber cache. <em>No additional network requests</em> are made for the CarPlay display.</li>
+                <li><strong>Home geofence (opt-in, off by default):</strong> If you enable the "cheap charging window at home arrival" notification in app settings, the app processes the GPS coordinates and radius of your home (manually entered by you or derived from your Tibber address via reverse geocoding). This data is <strong>stored exclusively locally in iOS system settings (<code>UserDefaults</code>)</strong> and never leaves your device. iOS monitors the home region via the Region Monitoring API (<code>CLCircularRegion</code>) — the app only receives a "region entered" event and does not know your location outside the home region.</li>
+                <li><strong>"Always" location permission:</strong> iOS requires this permission level for region monitoring to work in the background (app closed). The app uses it exclusively for this purpose — no continuous location tracking takes place.</li>
+                <li><strong>Reverse geocoding of the address:</strong> If you enter your address as text, the app passes it to Apple's <code>CLGeocoder</code>. Apple processes the request according to the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>. The result (coordinates) is stored only locally.</li>
+                <li><strong>Push notifications:</strong> Generated locally by the iOS device. No APNs token is transmitted to a server, no server-side push infrastructure is used.</li>
+                <li><strong>Deleting data:</strong> In App Settings → CarPlay → "Delete home" immediately removes all stored location data and stops region monitoring. Uninstalling the app permanently deletes all data.</li>
+                <li><strong>Legal basis:</strong> Art. 6 (1) (a) GDPR (consent — opt-in in app settings) or Art. 6 (1) (b) GDPR (performance of the function you activated).</li>
+            </ul>
 
             <h2>4. Website Hosting</h2>
             <p>This website is hosted on <strong>Cloudflare Pages</strong> (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). When you visit the site, Cloudflare automatically processes technical information (e.g. IP address, browser, timestamp) for the purpose of delivering the site and preventing abuse. Legal basis: Art. 6 (1) (f) GDPR (legitimate interest in secure operation). International transfer is covered by the EU-U.S. Data Privacy Framework. Cloudflare's privacy policy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>

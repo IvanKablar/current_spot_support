@@ -47,7 +47,7 @@
     <main class="legal">
         <div class="container">
             <h1>Integritetspolicy</h1>
-            <p class="legal-lead">Current Spot – Wear OS-app. Senast uppdaterad: 16 april 2026.</p>
+            <p class="legal-lead">Current Spot – Wear OS-, watchOS- och iOS-app. Senast uppdaterad: 13 maj 2026.</p>
 
             <h2>1. Personuppgiftsansvarig</h2>
             <p>Personuppgiftsansvarig enligt EU:s allmänna dataskyddsförordning (GDPR) och andra nationella dataskyddslagar:</p>
@@ -60,6 +60,7 @@
                 <li><strong>Hem-ID</strong>: Din Tibber Home-identifierare som används för att hämta elpriser.</li>
                 <li><strong>Elprisdata</strong>: Aktuella och prognostiserade priser från Tibber API.</li>
                 <li><strong>Appinställningar</strong>: Dina valda inställningar, t.ex. prisintervall (per timme / 15 minuter).</li>
+                <li><strong>CarPlay hemposition (iOS, valfritt, opt-in)</strong>: Om du aktiverar CarPlay-hemdetektion i appinställningarna lagras GPS-koordinaterna och radien för ditt hem lokalt i iOS-systeminställningarna. Som standard är denna funktion av. Se avsnitt 3.4 för detaljer.</li>
             </ul>
             <p>All data lagras uteslutande på dina enheter. Ingen personlig data överförs till apputvecklaren. Inga analys- eller spårningstjänster används.</p>
 
@@ -77,6 +78,18 @@
             <p>Data Layer används för att synkronisera din åtkomsttoken och dina inställningar mellan telefon och klocka via en lokal kanal som tillhandahålls av Google Play Services. Ingen användardata delas med Google utöver vad som krävs för appens funktionalitet.</p>
             <h3>3.3 Google Play Billing</h3>
             <p>Om du väljer att göra en frivillig donation behandlas betalningen av Google Play Billing. Current Spot ser aldrig dina betaluppgifter; utvecklaren får endast en anonym bekräftelse på att ett köp har ägt rum. Integritetsinformation: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+            <h3>3.4 CarPlay och plats (iOS, valfritt)</h3>
+            <p>De valfria CarPlay-funktionerna behandlar ytterligare data <strong>endast lokalt på din iPhone</strong>. Inga plats- eller adressdata överförs till utvecklaren, till Tibber eller till tredje part.</p>
+            <ul>
+                <li><strong>CarPlay-visning i bilen:</strong> När din iPhone är ansluten till CarPlay visar appen elpriser och billigaste laddningsblock på bilskärmen, hämtade från den lokala Tibber-cachen. <em>Inga ytterligare nätverksbegäranden</em> görs för CarPlay-visningen.</li>
+                <li><strong>Hem-geofence (opt-in, av som standard):</strong> Om du aktiverar aviseringen „billigt laddningsfönster vid hemkomst" i appinställningarna behandlar appen GPS-koordinaterna och radien för ditt hem (manuellt angivet av dig eller härlett från din Tibber-adress via reverse geocoding). Dessa data <strong>lagras endast lokalt i iOS-systeminställningarna (<code>UserDefaults</code>)</strong> och lämnar aldrig din enhet. iOS övervakar hemregionen via Region Monitoring API (<code>CLCircularRegion</code>) — appen tar endast emot en händelse av typen „region in" och känner inte till din plats utanför hemregionen.</li>
+                <li><strong>„Alltid"-platsbehörighet:</strong> iOS kräver denna behörighetsnivå för att regionövervakning ska fungera i bakgrunden (app stängd). Appen använder den endast för detta — ingen kontinuerlig platsspårning sker.</li>
+                <li><strong>Reverse geocoding av adressen:</strong> Om du anger din adress som text skickar appen den till Apples <code>CLGeocoder</code>. Apple behandlar begäran enligt <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Integritetspolicy</a>. Resultatet (koordinater) lagras endast lokalt.</li>
+                <li><strong>Push-aviseringar:</strong> Genereras lokalt av iOS-enheten. Inget APNs-token överförs till en server, ingen server-side push-infrastruktur används.</li>
+                <li><strong>Ta bort data:</strong> Via Appinställningar → CarPlay → „Ta bort hem" tas alla lagrade platsdata omedelbart bort och regionövervakningen stoppas. Vid avinstallation av appen raderas alla data permanent.</li>
+                <li><strong>Rättslig grund:</strong> Art. 6.1 a GDPR (samtycke — opt-in i appinställning) eller Art. 6.1 b GDPR (utförande av den funktion du aktiverat).</li>
+            </ul>
 
             <h2>4. Webbhotell</h2>
             <p>Denna webbplats hostas på <strong>Cloudflare Pages</strong> (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). När du besöker webbplatsen behandlar Cloudflare automatiskt teknisk information (t.ex. IP-adress, webbläsare, tidsstämpel) i syfte att leverera webbplatsen och förhindra missbruk. Rättslig grund: Art. 6 (1) (f) GDPR (berättigat intresse av säker drift). Internationell överföring täcks av EU-USA Data Privacy Framework. Cloudflares integritetspolicy: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>.</p>
