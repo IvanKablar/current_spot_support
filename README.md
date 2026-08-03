@@ -16,7 +16,7 @@ Hilfreich für eine schnelle Lösung:
 
 ## 📧 Kontakt
 
-Lieber per E-Mail? **hello@currentspot.app**
+Lieber per E-Mail? **ivankablar25@gmail.com**
 
 ## 🔗 Links
 
@@ -43,7 +43,7 @@ Helpful for a quick resolution:
 
 ## 📧 Contact
 
-Prefer e-mail? **hello@currentspot.app**
+Prefer e-mail? **ivankablar25@gmail.com**
 
 ## 🔗 Links
 
